@@ -18,12 +18,12 @@
 
     // Sticky Navbar
     $(window).scroll(function () {
-        if ($(this).scrollTop() > 300) {
+        if ($(this).scrollTop() > 100) {
             $('.sticky-top').addClass('bg-white shadow-sm').css('top', '0px');
-            $('.navbar-brand img').attr('src', 'img/logo-dark.png');
+            // $('.navbar-brand img').attr('src', 'img/logo-dark.png');
         } else {
             $('.sticky-top').removeClass('bg-white shadow-sm').css('top', '-150px');
-            $('.navbar-brand img').attr('src', 'img/logo.png');
+            // $('.navbar-brand img').attr('src', 'img/logo.png');
         }
     });
     

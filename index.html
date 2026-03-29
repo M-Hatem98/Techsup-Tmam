@@ -1,687 +1,788 @@
 <!DOCTYPE html>
 <html lang="en">
-  <head>
-    <meta charset="utf-8" />
-    <title>Tmam HR System</title>
-    <meta content="width=device-width, initial-scale=1.0" name="viewport" />
-    <meta content="" name="keywords" />
-    <meta content="" name="description" />
 
-    <!-- Favicon -->
-    <link href="img/favicon.ico" rel="icon" />
+<head>
+  <meta charset="utf-8" />
+  <title>Tmam HR System</title>
+  <meta content="width=device-width, initial-scale=1.0" name="viewport" />
+  <meta content="" name="keywords" />
+  <meta content="" name="description" />
 
-    <!-- Google Web Fonts -->
-    <link rel="preconnect" href="https://fonts.googleapis.com" />
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-    <link
-      href="https://fonts.googleapis.com/css2?family=Open+Sans&family=Space+Grotesk&display=swap"
-      rel="stylesheet"
-    />
+  <!-- Favicon -->
+  <link href="img/favicon.ico" rel="icon" />
 
-    <!-- Icon Font Stylesheet -->
-    <link
-      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.10.0/css/all.min.css"
-      rel="stylesheet"
-    />
-    <link
-      href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.4.1/font/bootstrap-icons.css"
-      rel="stylesheet"
-    />
+  <!-- Google Web Fonts -->
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Open+Sans&family=Space+Grotesk&display=swap" rel="stylesheet" />
 
-    <!-- Libraries Stylesheet -->
-    <link href="lib/animate/animate.min.css" rel="stylesheet" />
-    <link href="lib/owlcarousel/assets/owl.carousel.min.css" rel="stylesheet" />
+  <!-- Icon Font Stylesheet -->
+  <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.10.0/css/all.min.css" rel="stylesheet" />
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.4.1/font/bootstrap-icons.css" rel="stylesheet" />
 
-    <!-- Customized Bootstrap Stylesheet -->
-    <link href="css/bootstrap.min.css" rel="stylesheet" />
+  <!-- Libraries Stylesheet -->
+  <link href="lib/animate/animate.min.css" rel="stylesheet" />
+  <link href="lib/owlcarousel/assets/owl.carousel.min.css" rel="stylesheet" />
 
-    <!-- Template Stylesheet -->
-    <link href="css/style.css" rel="stylesheet" />
-  </head>
+  <!-- Customized Bootstrap Stylesheet -->
+  <link href="css/bootstrap.min.css" rel="stylesheet" />
 
-  <body>
-    <!-- Spinner Start -->
-    <div
-      id="spinner"
-      class="show bg-white position-fixed translate-middle w-100 vh-100 top-50 start-50 d-flex align-items-center justify-content-center"
-    >
-      <div
-        class="spinner-grow text-primary"
-        style="width: 3rem; height: 3rem"
-        role="status"
-      >
-        <span class="sr-only">Loading...</span>
-      </div>
+  <!-- Template Stylesheet -->
+  <link href="css/style.css" rel="stylesheet" />
+</head>
+
+<body>
+  <!-- Spinner Start -->
+  <div id="spinner"
+    class="show bg-white position-fixed translate-middle w-100 vh-100 top-50 start-50 d-flex align-items-center justify-content-center">
+    <div class="spinner-grow text-primary" style="width: 3rem; height: 3rem" role="status">
+      <span class="sr-only">Loading...</span>
     </div>
-    <!-- Spinner End -->
+  </div>
+  <!-- Spinner End -->
 
-    <!-- Navbar Start -->
-    <div class="container-fluid sticky-top">
-      <div class="container">
-        <nav
-          class="navbar navbar-expand-lg navbar-light border-bottom border-2 border-white"
-        >
-          <a href="index.html" class="navbar-brand">
-            <img
-              id="Logo"
-              src="img/logo.png"
-              alt="Tmam Logo"
-              width="140px"
-              height="auto"
-            />
-          </a>
-          <button
-            type="button"
-            class="navbar-toggler ms-auto me-0"
-            data-bs-toggle="collapse"
-            data-bs-target="#navbarCollapse"
-          >
-            <span class="navbar-toggler-icon"></span>
-          </button>
-          <div class="collapse navbar-collapse" id="navbarCollapse">
-            <div class="navbar-nav ms-auto">
-              <a href="index.html" class="nav-item nav-link active">Home</a>
-              <a href="about.html" class="nav-item nav-link">About</a>
-              <a href="service.html" class="nav-item nav-link">Services</a>
-              <a href="contact.html" class="nav-item nav-link">Contact</a>
-            </div>
-          </div>
-        </nav>
-      </div>
-    </div>
-    <!-- Navbar End -->
-
-    <!-- Hero Start -->
-    <div class="container-fluid pb-5 hero-header bg-light-blue mb-5">
-      <div class="container py-5">
-        <div class="row g-5 align-items-center mb-5">
-          <div class="col-lg-6">
-            <h1 class="display-3mb-4 text-white animated slideInRight">
-              Tmam <span class="text-primary">HR System</span> For Modern
-              Businesses
-            </h1>
-            <h5
-              class="d-inline-block border border-2 border-white py-3 px-5 mb-0 animated slideInRight"
-            >
-              Simplify attendance, empower productivity.
-            </h5>
-          </div>
-          <div class="col-lg-6">
-            <div class="owl-carousel header-carousel animated fadeIn">
-              <img
-                class="img-fluid"
-                src="img/dashboard.png"
-                alt="Hero Images"
-              />
-              <img
-                class="img-fluid"
-                src="img/dashboard.png"
-                alt="Hero Images"
-              />
-              <img
-                class="img-fluid"
-                src="img/dashboard.png"
-                alt="Hero Images"
-              />
-            </div>
+  <!-- Navbar Start -->
+  <div class="container-fluid sticky-top">
+    <div class="container">
+      <nav class="navbar navbar-expand-lg navbar-light border-bottom border-2 border-white py-0">
+        <a href="index.html" class="navbar-brand">
+          <img id="Logo" src="img/logo-dark.png" alt="Tmam Logo" width="80px" height="auto" />
+        </a>
+        <button type="button" class="navbar-toggler ms-auto me-0" data-bs-toggle="collapse"
+          data-bs-target="#navbarCollapse">
+          <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse" id="navbarCollapse">
+          <div class="navbar-nav ms-auto">
+            <a href="index.html" class="nav-item nav-link active">Home</a>
+            <a href="about.html" class="nav-item nav-link">About</a>
+            <a href="service.html" class="nav-item nav-link">Services</a>
+            <a href="contact.html" class="nav-item nav-link">Contact</a>
           </div>
         </div>
-        <div class="row g-5 animated fadeIn">
-          <div class="col-md-6 col-lg-3">
-            <div class="d-flex align-items-center">
-              <div
-                class="flex-shrink-0 btn-square border border-2 border-white me-3"
-              >
-                <i class="far fa-building text-orange"></i>
-              </div>
-              <h5 class="lh-base mb-0 text-white">+50 Companies</h5>
-            </div>
-          </div>
-          <div class="col-md-6 col-lg-3">
-            <div class="d-flex align-items-center">
-              <div
-                class="flex-shrink-0 btn-square border border-2 border-white me-3"
-              >
-                <i class="fa fa-user text-orange"></i>
-              </div>
-              <h5 class="lh-base mb-0 text-white">+100K Employees</h5>
-            </div>
-          </div>
-          <div class="col-md-6 col-lg-3">
-            <div class="d-flex align-items-center">
-              <div
-                class="flex-shrink-0 btn-square border border-2 border-white me-3"
-              >
-                <i class="fa fa-hand-point-right text-orange"></i>
-              </div>
-              <h5 class="lh-base mb-0 text-white">+10M Check-Ins</h5>
-            </div>
-          </div>
-          <div class="col-md-6 col-lg-3">
-            <div class="d-flex align-items-center justify-content-center">
-              <div
-                class="flex-shrink-0 btn-square border border-2 border-white me-3"
-              >
-                <i class="fa fa-chart-line text-orange"></i>
-              </div>
-              <h5 class="lh-base mb-0 text-white">Real-Time Analytics</h5>
-            </div>
-          </div>
-        </div>
-      </div>
+      </nav>
     </div>
-    <!-- Hero End -->
+  </div>
+  <!-- Navbar End -->
 
-    <!-- About Start -->
-    <div class="container-fluid py-5">
-      <div class="container">
-        <div class="row g-5">
-          <!-- Left Images -->
-          <div class="col-lg-6">
-            <div class="row">
-              <div class="col-6 wow fadeIn" data-wow-delay="0.1s">
-                <img
-                  class="img-fluid"
-                  src="img/dashboard-1.png"
-                  alt="HR Dashboard Overview"
-                />
+  <!-- Hero Start -->
+  <section class="landing-hero landing-hero--plain">
+    <div class="container py-5">
+      <div class="row align-items-center g-5 landing-hero__grid">
+        <div class="col-lg-6 landing-hero__content">
+          <p class="landing-hero__tag animated slideInRight" style="animation-delay: 0.05s">
+            <span class="landing-hero__tag-dot" aria-hidden="true"></span>
+            Modern HR for growing teams
+          </p>
+
+          <h1 class="landing-hero__title display-4 fw-bold animated slideInRight" style="animation-delay: 0.1s">
+            Tmam <span class="text-primary">HR System</span>
+          </h1>
+
+          <p class="landing-hero__lead animated slideInRight" style="animation-delay: 0.15s">
+            Streamline attendance, automate leave, and get workforce insights in one
+            place. Keep HR data secure and teams aligned from anywhere.
+          </p>
+
+          <div class="landing-hero__store-actions animated slideInRight" style="animation-delay: 0.2s">
+            <a class="store-badge store-badge--apple" href="#" target="_blank" rel="noopener noreferrer"
+              aria-label="Download on the App Store">
+              <span class="store-badge__icon" aria-hidden="true"><i class="fab fa-apple"></i></span>
+              <span class="store-badge__text">
+                <span class="store-badge__small">Download on the</span>
+                <span class="store-badge__big">App Store</span>
+              </span>
+            </a>
+
+            <a class="store-badge store-badge--google" href="#" target="_blank" rel="noopener noreferrer"
+              aria-label="Get it on Google Play">
+              <span class="store-badge__icon" aria-hidden="true"><i class="fab fa-google-play"></i></span>
+              <span class="store-badge__text">
+                <span class="store-badge__small">Get it on</span>
+                <span class="store-badge__big">Google Play</span>
+              </span>
+            </a>
+          </div>
+
+          <div class="row g-3 landing-hero__stats-grid mt-3 animated fadeIn">
+            <div class="col-6 col-md-3">
+              <div class="landing-hero__stat">
+                <div class="landing-hero__stat-icon" aria-hidden="true">
+                  <i class="far fa-building"></i>
+                </div>
+                <div class="landing-hero__stat-text">
+                  <div class="landing-hero__stat-value">+50</div>
+                  <div class="landing-hero__stat-label">Companies</div>
+                </div>
               </div>
-              <div class="col-6 wow fadeIn" data-wow-delay="0.3s">
-                <img
-                  class="img-fluid h-75"
-                  src="img/dashboard-2.png"
-                  alt="Employee Attendance Chart"
-                />
-                <div
-                  class="h-25 d-flex align-items-center text-center bg-primary px-4"
-                >
-                  <h4 class="text-white lh-base mb-0">
-                    Smart Attendance Management
-                  </h4>
+            </div>
+            <div class="col-6 col-md-3">
+              <div class="landing-hero__stat">
+                <div class="landing-hero__stat-icon" aria-hidden="true">
+                  <i class="fa fa-user"></i>
+                </div>
+                <div class="landing-hero__stat-text">
+                  <div class="landing-hero__stat-value">+100K</div>
+                  <div class="landing-hero__stat-label">Employees</div>
+                </div>
+              </div>
+            </div>
+            <div class="col-6 col-md-3">
+              <div class="landing-hero__stat">
+                <div class="landing-hero__stat-icon" aria-hidden="true">
+                  <i class="fa fa-hand-point-right"></i>
+                </div>
+                <div class="landing-hero__stat-text">
+                  <div class="landing-hero__stat-value">+10M</div>
+                  <div class="landing-hero__stat-label">Check-Ins</div>
+                </div>
+              </div>
+            </div>
+            <div class="col-6 col-md-3">
+              <div class="landing-hero__stat">
+                <div class="landing-hero__stat-icon" aria-hidden="true">
+                  <i class="fa fa-chart-line"></i>
+                </div>
+                <div class="landing-hero__stat-text">
+                  <div class="landing-hero__stat-value">Real-Time</div>
+                  <div class="landing-hero__stat-label">Analytics</div>
                 </div>
               </div>
             </div>
           </div>
+        </div>
 
-          <!-- Right Content -->
-          <div class="col-lg-6 wow fadeIn" data-wow-delay="0.5s">
-            <h1 class="mb-5">
-              <span class="text-uppercase text-primary bg-light-blue px-2"
-                >About</span
-              >
-              Our HR Attendance System
-            </h1>
-            <p class="mb-4">
-              Our HR Attendance System is designed to help organizations manage
-              their workforce efficiently. From attendance tracking to
-              performance reporting, our platform provides HR departments with
-              the tools they need to save time, reduce errors, and make
-              data-driven decisions.
-            </p>
-            <p class="mb-5">
-              With an intuitive interface and powerful automation features, the
-              system makes employee management simple and accurate. Whether
-              you’re tracking work hours, managing shifts, or generating
-              reports, everything is just a few clicks away.
-            </p>
-
-            <!-- Features -->
-            <div class="row g-3">
-              <div class="col-sm-6">
-                <h6 class="mb-3">
-                  <i class="fa fa-check text-primary me-2"></i>Real-Time
-                  Attendance
-                </h6>
-                <h6 class="mb-0">
-                  <i class="fa fa-check text-primary me-2"></i>Automated Reports
-                </h6>
-              </div>
-              <div class="col-sm-6">
-                <h6 class="mb-3">
-                  <i class="fa fa-check text-primary me-2"></i>Cloud-Based
-                  Access
-                </h6>
-                <h6 class="mb-0">
-                  <i class="fa fa-check text-primary me-2"></i>Secure Employee
-                  Data
-                </h6>
-              </div>
-            </div>
-
-            <!-- Buttons & Socials -->
-            <div class="d-flex align-items-center mt-5">
-              <a class="btn btn-primary px-4 me-2" href="#features"
-                >Learn More</a
-              >
-              <a
-                class="btn btn-outline-primary btn-square border-2 me-2"
-                href="#"
-                ><i class="fab fa-facebook-f"></i
-              ></a>
-              <a
-                class="btn btn-outline-primary btn-square border-2 me-2"
-                href="#"
-                ><i class="fab fa-twitter"></i
-              ></a>
-              <a
-                class="btn btn-outline-primary btn-square border-2 me-2"
-                href="#"
-                ><i class="fab fa-instagram"></i
-              ></a>
-              <a class="btn btn-outline-primary btn-square border-2" href="#"
-                ><i class="fab fa-linkedin-in"></i
-              ></a>
-            </div>
+        <div class="col-lg-6 landing-hero__visual">
+          <div class="landing-hero__image-wall" aria-hidden="true">
+            <figure class="landing-hero__device landing-hero__device--a">
+              <img src="img/dashboard-1.png" alt="Attendance dashboard preview"
+                class="img-fluid landing-hero__device-img" />
+            </figure>
+            <figure class="landing-hero__device landing-hero__device--b">
+              <img src="img/dashboard-2.png" alt="Employee leave and shift insights preview"
+                class="img-fluid landing-hero__device-img" />
+            </figure>
+            <figure class="landing-hero__device landing-hero__device--c">
+              <img src="img/dashboard-3.png" alt="Real-time analytics and reporting preview"
+                class="img-fluid landing-hero__device-img" />
+            </figure>
           </div>
         </div>
       </div>
     </div>
-    <!-- About End -->
+  </section>
+  <!-- Hero End -->
 
-    <!-- Service Start -->
-    <div class="container-fluid py-5 bg-light">
-      <div class="container py-5">
-        <div class="text-center mb-5 wow fadeIn" data-wow-delay="0.1s">
-          <h1 class="mb-3">
-            Our Smart
-            <span class="text-uppercase text-primary bg-light-blue px-2"
-              >Solutions</span
-            >
-          </h1>
-          <p class="text-muted mx-auto" style="max-width: 700px">
-            Explore our comprehensive HR management modules designed to help
-            your business stay organized, efficient, and always connected.
-          </p>
-        </div>
-
-        <div class="row g-4">
-          <!-- Service Item -->
-          <div class="col-md-6 col-lg-3 wow fadeInUp" data-wow-delay="0.1s">
-            <div
-              class="service-item text-center p-4 bg-white shadow-sm rounded-4 h-100"
-            >
-              <div class="icon mb-4">
-                <i class="far fa-clock fa-3x text-primary"></i>
-              </div>
-              <h4 class="mb-3">Attendance System</h4>
-              <p class="text-muted mb-0">
-                Automate attendance tracking with real-time monitoring, ensuring
-                accuracy and transparency.
-              </p>
-            </div>
-          </div>
-
-          <!-- Service Item -->
-          <div class="col-md-6 col-lg-3 wow fadeInUp" data-wow-delay="0.3s">
-            <div
-              class="service-item text-center p-4 bg-white shadow-sm rounded-4 h-100"
-            >
-              <div class="icon mb-4">
-                <i class="fa fa-money-bill-wave fa-3x text-primary"></i>
-              </div>
-              <h4 class="mb-3">Payroll Management</h4>
-              <p class="text-muted mb-0">
-                Streamline salary processing, manage deductions, and generate
-                payslips effortlessly.
-              </p>
-            </div>
-          </div>
-
-          <!-- Service Item -->
-          <div class="col-md-6 col-lg-3 wow fadeInUp" data-wow-delay="0.5s">
-            <div
-              class="service-item text-center p-4 bg-white shadow-sm rounded-4 h-100"
-            >
-              <div class="icon mb-4">
-                <i class="fa fa-chart-line fa-3x text-primary"></i>
-              </div>
-              <h4 class="mb-3">Reports & Analytics</h4>
-              <p class="text-muted mb-0">
-                Gain valuable insights through detailed reports and smart
-                performance analytics.
-              </p>
-            </div>
-          </div>
-
-          <!-- Service Item -->
-          <div class="col-md-6 col-lg-3 wow fadeInUp" data-wow-delay="0.7s">
-            <div
-              class="service-item text-center p-4 bg-white shadow-sm rounded-4 h-100"
-            >
-              <div class="icon mb-4">
-                <i class="fa fa-users fa-3x text-primary"></i>
-              </div>
-              <h4 class="mb-3">Employee Management</h4>
-              <p class="text-muted mb-0">
-                Manage employee information, roles, and performance — all from
-                one secure dashboard.
-              </p>
-            </div>
-          </div>
-        </div>
-        <div
-          class="row mt-5 justify-content-center text-white p-4 rounded-4 wow zoomIn"
-          data-wow-delay="0.1s"
-        >
-          <!-- Contact Box -->
-          <div class="col-lg-6">
-            <div
-              class="d-flex align-items-center justify-content-center bg-primary text-white p-4 rounded-4 shadow-sm"
-            >
-              <div
-                class="btn-square flex-shrink-0 bg-white text-primary rounded-circle d-flex align-items-center justify-content-center"
-                style="width: 70px; height: 70px"
-              >
-                <i class="fa fa-phone fa-2x"></i>
-              </div>
-              <div class="px-4">
-                <h4 class="mb-1 text-white">+966 920015409</h4>
-                <p class="mb-0 text-white-50">
-                  Call us now for a free system demo and consultation
-                </p>
-              </div>
-            </div>
-          </div>
-        </div>
-      </div>
-    </div>
-    <!-- Service End -->
-
-    <!-- How It Works -->
-    <section class="how-it-works-section py-5">
-  <div class="container">
-
-    <div class="text-center mb-5 wow fadeIn" data-wow-delay="0.1s">
-      <h2 class="fw-bold">
-        How It <span class="text-uppercase text-primary bg-light-blue px-2">Works</span>
-      </h2>
-      <p class="text-muted">A simple 4-step process to activate and start using your tracking system.</p>
-    </div>
-
-    <div class="hiw-flow">
-
-      <div class="hiw-step wow fadeInUp" data-wow-delay="0.2s">
-        <div class="circle"><i class="fas fa-user-plus"></i></div>
-        <h5>Create Account</h5>
-        <p>Sign up and access your personal dashboard in seconds.</p>
-      </div>
-
-      <div class="separator wow fadeIn" data-wow-delay="0.3s"></div>
-
-      <div class="hiw-step wow fadeInUp" data-wow-delay="0.4s">
-        <div class="circle"><i class="fas fa-satellite-dish"></i></div>
-        <h5>Connect Device</h5>
-        <p>Link your GPS tracker and configure your preferences.</p>
-      </div>
-
-      <div class="separator wow fadeIn" data-wow-delay="0.5s"></div>
-
-      <div class="hiw-step wow fadeInUp" data-wow-delay="0.6s">
-        <div class="circle"><i class="fas fa-location-arrow"></i></div>
-        <h5>Track Live</h5>
-        <p>Monitor real-time movement, routes, and device activity.</p>
-      </div>
-
-      <div class="separator wow fadeIn" data-wow-delay="0.7s"></div>
-
-      <div class="hiw-step wow fadeInUp" data-wow-delay="0.8s">
-        <div class="circle"><i class="fas fa-bell"></i></div>
-        <h5>Receive Alerts</h5>
-        <p>Stay informed with instant movement and safety notifications.</p>
-      </div>
-
-    </div>
-  </div>
-</section>
-
-    <!-- How It Works End -->
-
-    <!-- Why Choose US Start -->
-  <section class="why-choose-future py-5">
-  <div class="container">
-
-    <div class="text-center mb-5 wow fadeInUp" data-wow-delay="0.1s">
-      <h2 class="fw-bold text-white">
-        Why <span class="future-highlight">Choose Us</span>
-      </h2>
-      <p class="text-muted">Smarter attendance. Stronger HR. Seamless workforce control.</p>
-    </div>
-
-    <div class="future-list">
-
-      <!-- Card 1 -->
-      <div class="future-item wow fadeInUp" data-wow-delay="0.2s">
-        <div class="icon-wrap">
-          <i class="fas fa-fingerprint"></i>
-        </div>
-        <div class="content">
-          <h5>Biometric-Grade Accuracy</h5>
-          <p>Eliminate proxy attendance with advanced biometric and geofencing validation.</p>
-        </div>
-      </div>
-
-      <!-- Card 2 -->
-      <div class="future-item wow fadeInUp" data-wow-delay="0.3s">
-        <div class="icon-wrap">
-          <i class="fas fa-sync-alt"></i>
-        </div>
-        <div class="content">
-          <h5>Real-Time Attendance Sync</h5>
-          <p>Instant updates across all departments, locations, and devices — no delays.</p>
-        </div>
-      </div>
-
-      <!-- Card 3 -->
-      <div class="future-item wow fadeInUp" data-wow-delay="0.4s">
-        <div class="icon-wrap">
-          <i class="fas fa-user-shield"></i>
-        </div>
-        <div class="content">
-          <h5>Secure Employee Data</h5>
-          <p>All attendance logs and employee records are encrypted with enterprise-level protection.</p>
-        </div>
-      </div>
-
-      <!-- Card 4 -->
-      <div class="future-item wow fadeInUp" data-wow-delay="0.5s">
-        <div class="icon-wrap">
-          <i class="fas fa-chart-line"></i>
-        </div>
-        <div class="content">
-          <h5>Smart HR Insights</h5>
-          <p>AI-powered analytics to detect trends, absenteeism patterns, and productivity stats.</p>
-        </div>
-      </div>
-
-      <!-- Card 5 -->
-      <div class="future-item wow fadeInUp" data-wow-delay="0.6s">
-        <div class="icon-wrap">
-          <i class="fas fa-calendar-check"></i>
-        </div>
-        <div class="content">
-          <h5>Automated Leave & Shift Management</h5>
-          <p>Manage shifts, approvals, and leave allocations with hands-free automation.</p>
-        </div>
-      </div>
-
-    </div>
-
-  </div>
-</section>
-
-
-    <!-- Why Choose US End -->
-
-    <!-- Pricing Plans Start -->
-  <section class="pricing-future py-5">
-  <div class="container">
-
-    <div class="text-center mb-5">
-      <h2 class="fw-bold">Flexible <span class="text-uppercase text-primary bg-light-blue px-2">Pricing Plans</span></h2>
-      <p class="text-muted">Choose the perfect plan for your team, business, or organization.</p>
-    </div>
-
-    <div class="pricing-grid">
-
-      <!-- Plan 1 -->
-      <div class="price-card">
-        <div class="price-header">
-          <h4>Starter</h4>
-          <p>Best for small teams</p>
-        </div>
-        <div class="price-tag">
-          <h3>$19<span>/month</span></h3>
-        </div>
-        <ul class="price-features">
-          <li><i class="fas fa-check"></i> Up to 20 employees</li>
-          <li><i class="fas fa-check"></i> Mobile Attendance</li>
-          <li><i class="fas fa-check"></i> Basic Reporting</li>
-          <li><i class="fas fa-check"></i> Email Support</li>
-        </ul>
-        <button class="price-btn">Get Started</button>
-      </div>
-
-      <!-- Plan 2 (Popular) -->
-      <div class="price-card popular">
-        <div class="badge">Most Popular</div>
-        <div class="price-header">
-          <h4>Professional</h4>
-          <p>Perfect for growing businesses</p>
-        </div>
-        <div class="price-tag">
-          <h3>$49<span>/month</span></h3>
-        </div>
-        <ul class="price-features">
-          <li><i class="fas fa-check"></i> Up to 100 employees</li>
-          <li><i class="fas fa-check"></i> Biometric Integration</li>
-          <li><i class="fas fa-check"></i> Attendance Analytics</li>
-          <li><i class="fas fa-check"></i> Priority Support</li>
-        </ul>
-        <button class="price-btn">Choose Plan</button>
-      </div>
-
-      <!-- Plan 3 -->
-      <div class="price-card">
-        <div class="price-header">
-          <h4>Enterprise</h4>
-          <p>Tailored for large organizations</p>
-        </div>
-        <div class="price-tag">
-          <h3>Custom</h3>
-        </div>
-        <ul class="price-features">
-          <li><i class="fas fa-check"></i> Unlimited employees</li>
-          <li><i class="fas fa-check"></i> Advanced HR Insights</li>
-          <li><i class="fas fa-check"></i> Dedicated Account Manager</li>
-          <li><i class="fas fa-check"></i> On-site Support</li>
-        </ul>
-        <button class="price-btn">Contact Sales</button>
-      </div>
-
-    </div>
-
-  </div>
-</section>
-
-
-    <!-- Pricing Plans End -->
-
-    <!-- Newsletter Start -->
-    <div class="container-fluid newsletter p-0">
-      <div class="container p-0">
-        <div class="row g-0 align-items-center">
-          <div
-            class="col-md-5 ps-lg-0 text-start wow fadeIn"
-            data-wow-delay="0.2s"
-          >
-            <img class="img-fluid w-100" src="img/newsletter-2.jpg" alt="Newsletter" />
-          </div>
-          <div
-            class="col-md-7 py-5 newsletter-text wow fadeIn"
-            data-wow-delay="0.5s"
-          >
-            <div class="p-5">
-              <h1 class="mb-5">
-                Subscribe the
-                <span class="text-uppercase text-primary bg-white px-2"
-                  >Newsletter</span
-                >
-              </h1>
-              <div class="position-relative w-100 mb-2">
-                <input
-                  class="form-control border-0 w-100 ps-4 pe-5"
-                  type="text"
-                  placeholder="Enter Your Email"
-                  style="height: 60px"
-                />
-                <button
-                  type="button"
-                  class="btn shadow-none position-absolute top-0 end-0 mt-2 me-2"
-                >
-                  <i class="fa fa-paper-plane text-primary fs-4"></i>
-                </button>
-              </div>
-              <p class="mb-0">Diam sed sed dolor stet amet eirmod</p>
-            </div>
-          </div>
-        </div>
-      </div>
-    </div>
-    <!-- Newsletter End -->
-
-    <!-- Footer Start -->
-    <div class="container-fluid bg-dark text-white-50 footer pt-5">
-  <div class="container py-5">
-    <div class="row g-5">
-
-      <!-- Logo & About -->
-      <div class="col-md-6 col-lg-5 wow fadeIn" data-wow-delay="0.1s">
-        <a href="index.html" class="d-inline-block mb-3">
-            <img src="img/logo.png" alt="Logo">
-        </a>
-        <p class="mb-4">
-          Tmam Tracking provides advanced real-time tracking solutions for
-          people, pets, vehicles, and valuable assets. Smart, secure, and
-          accessible from anywhere at any time.
+  <!-- How It Works -->
+  <section class="how-it-works py-5">
+    <div class="container">
+      <div class="text-center mb-5 wow fadeIn" data-wow-delay="0.1s">
+        <h2 class="fw-bold text-primary">
+          How It <span class="text-uppercase px-2">Works</span>
+        </h2>
+        <p class="text-muted">
+          Just three steps to get your teams onboard, tracking attendance, and seeing results.
         </p>
       </div>
 
-      <!-- Contact Info -->
-      <div class="col-md-6 col-lg-4 wow fadeIn" data-wow-delay="0.3s">
-        <h5 class="text-white mb-4">Get In Touch</h5>
-        <p><i class="fa fa-map-marker-alt me-3"></i>12 Cerecon - 4th Floor - Office No. 403, Olaya St, Riyadh 12241, Saudi Arabia.</p>
-        <p><i class="fa fa-phone-alt me-3"></i>+966 920015409</p>
-        <p><i class="fa fa-envelope me-3"></i>info@techsupbusiness.com</p>
-        <div class="d-flex pt-2">
-          <a class="btn btn-outline-primary btn-square border-2 me-2" href="#"><i class="fab fa-twitter"></i></a>
-          <a class="btn btn-outline-primary btn-square border-2 me-2" href="#"><i class="fab fa-facebook-f"></i></a>
-          <a class="btn btn-outline-primary btn-square border-2 me-2" href="#"><i class="fab fa-instagram"></i></a>
-          <a class="btn btn-outline-primary btn-square border-2 me-2" href="#"><i class="fab fa-youtube"></i></a>
-          <a class="btn btn-outline-primary btn-square border-2 me-2" href="#"><i class="fab fa-linkedin-in"></i></a>
+      <div class="how-it-works__steps row g-4">
+        <!-- Step 1 -->
+        <div class="col-md-4">
+          <article class="how-step wow fadeInUp" data-wow-delay="0.2s">
+            <div class="how-step__header">
+              <div class="how-step__badge">Step 1</div>
+              <h5 class="how-step__title">Download App</h5>
+              <p class="how-step__description">
+                Download Tmam from the App Store or Google Play and install it on your device.
+              </p>
+            </div>
+            <div class="how-step__device">
+              <div class="device-frame">
+                <img src="img/mobile-frame.png" alt="Mobile phone frame" class="device-frame__image" />
+                <div class="device-frame__screen">
+                  <img src="img/how-step-1.jpeg" alt="App screen showing company and branch setup"
+                    class="device-frame__screen-image" />
+                </div>
+              </div>
+            </div>
+          </article>
+        </div>
+
+        <!-- Step 2 -->
+        <div class="col-md-4">
+          <article class="how-step wow fadeInUp" data-wow-delay="0.35s">
+            <div class="how-step__header">
+              <div class="how-step__badge">Step 2</div>
+              <h5 class="how-step__title">Sign In</h5>
+              <p class="how-step__description">
+                Sign in using your account credentials Or Your Fingerprint to access your App and team tools.
+              </p>
+            </div>
+            <div class="how-step__device">
+              <div class="device-frame">
+                <img src="img/mobile-frame.png" alt="Mobile phone frame" class="device-frame__image" />
+                <div class="device-frame__screen">
+                  <img src="img/how-step-2.jpeg" alt="App screen showing employee list and profiles"
+                    class="device-frame__screen-image" />
+                </div>
+              </div>
+            </div>
+          </article>
+        </div>
+
+        <!-- Step 3 -->
+        <div class="col-md-4">
+          <article class="how-step wow fadeInUp" data-wow-delay="0.5s">
+            <div class="how-step__header">
+              <div class="how-step__badge">Step 3</div>
+              <h5 class="how-step__title">Logout</h5>
+              <p class="how-step__description">
+                Log out anytime to keep your account secure when you finish your session.
+              </p>
+            </div>
+            <div class="how-step__device">
+              <div class="device-frame">
+                <img src="img/mobile-frame.png" alt="Mobile phone frame" class="device-frame__image" />
+                <div class="device-frame__screen">
+                  <img src="img/how-step-3.jpeg" alt="App screen showing attendance analytics"
+                    class="device-frame__screen-image" />
+                </div>
+              </div>
+            </div>
+          </article>
+        </div>
+      </div>
+    </div>
+  </section>
+  <!-- How It Works End -->
+
+  <!-- Why Choose Us Start -->
+  <section class="why-choose-showcase py-5">
+    <div class="container">
+      <div class="why-choose-showcase__intro text-center mb-5 wow fadeInUp" data-wow-delay="0.1s">
+        <p class="why-choose-showcase__eyebrow">Why Choose Us</p>
+        <h2 class="why-choose-showcase__title">
+          <span class="scribble-word">Powerful</span> attendance platform built for real HR teams
+        </h2>
+        <p class="why-choose-showcase__description">
+          Tmam gives you speed, control, and clarity across every attendance workflow.
+          From employee actions to management reports, every module is designed for real results.
+        </p>
+      </div>
+
+      <div class="why-choose-pillars row g-4 mb-5">
+        <div class="col-md-4">
+          <article class="why-choose-pillar wow fadeInUp" data-wow-delay="0.12s">
+            <div class="why-choose-pillar__icon"><i class="fas fa-smile"></i></div>
+            <h5 class="why-choose-pillar__title">A great experience for everyone</h5>
+            <p class="why-choose-pillar__text">Simple, fast, and intuitive screens for admins, managers, and employees.
+            </p>
+          </article>
+        </div>
+        <div class="col-md-4">
+          <article class="why-choose-pillar wow fadeInUp" data-wow-delay="0.18s">
+            <div class="why-choose-pillar__icon"><i class="fas fa-users"></i></div>
+            <h5 class="why-choose-pillar__title">Special attention to employees</h5>
+            <p class="why-choose-pillar__text">Employee-first flows for check-in, leave requests, and status
+              transparency.</p>
+          </article>
+        </div>
+        <div class="col-md-4">
+          <article class="why-choose-pillar wow fadeInUp" data-wow-delay="0.24s">
+            <div class="why-choose-pillar__icon"><i class="fas fa-chart-line"></i></div>
+            <h5 class="why-choose-pillar__title">Improving performance and profitability</h5>
+            <p class="why-choose-pillar__text">Actionable insights that reduce time waste and improve workforce
+              efficiency.</p>
+          </article>
         </div>
       </div>
 
-      <!-- Important Links -->
-      <div class="col-md-6 col-lg-3 wow fadeIn" data-wow-delay="0.5s">
-        <h5 class="text-white mb-4">Quick Links</h5>
-        <a class="btn btn-link" href="#">About Us</a>
-        <a class="btn btn-link" href="#">Features</a>
-        <a class="btn btn-link" href="#">Pricing</a>
-        <a class="btn btn-link" href="#">Support</a>
-        <a class="btn btn-link" href="#">Terms & Conditions</a>
+      <div class="service-detail-list">
+        <article class="service-detail row g-4 align-items-center wow fadeInUp" data-wow-delay="0.1s">
+          <div class="col-lg-6">
+            <div class="service-detail__media"><span
+                class="service-detail__shape service-detail__shape--one"></span><img src="img/dashboard-1.png"
+                alt="Shift planner service screenshot" class="service-detail__image" /></div>
+          </div>
+          <div class="col-lg-6">
+            <div class="service-detail__content">
+              <h4 class="service-detail__title">Shift Planner</h4>
+              <p class="service-detail__subtitle">Create balanced schedules in minutes for every department.</p>
+              <ul class="service-detail__features">
+                <li>Smart shift templates</li>
+                <li>Conflict detection</li>
+                <li>Bulk schedule publishing</li>
+                <li>Smart shift templates</li>
+                <li>Conflict detection</li>
+                <li>Bulk schedule publishing</li>
+              </ul><a href="contact.html" class="btn btn-primary service-detail__cta">Request Demo</a>
+            </div>
+          </div>
+        </article>
+        <article class="service-detail service-detail--reverse row g-4 align-items-center wow fadeInUp"
+          data-wow-delay="0.12s">
+          <div class="col-lg-6">
+            <div class="service-detail__media"><span
+                class="service-detail__shape service-detail__shape--two"></span><img src="img/dashboard-2.png"
+                alt="Attendance logs service screenshot" class="service-detail__image" /></div>
+          </div>
+          <div class="col-lg-6">
+            <div class="service-detail__content">
+              <h4 class="service-detail__title">Attendance Logs</h4>
+              <p class="service-detail__subtitle">See live check-ins and check-outs with clean timeline history.</p>
+              <ul class="service-detail__features">
+                <li>Live attendance feed</li>
+                <li>Filter by team and branch</li>
+                <li>Export reports instantly</li>
+                <li>Live attendance feed</li>
+                <li>Filter by team and branch</li>
+                <li>Export reports instantly</li>
+              </ul><a href="contact.html" class="btn btn-primary service-detail__cta">Request Demo</a>
+            </div>
+          </div>
+        </article>
+        <article class="service-detail row g-4 align-items-center wow fadeInUp" data-wow-delay="0.14s">
+          <div class="col-lg-6">
+            <div class="service-detail__media"><span
+                class="service-detail__shape service-detail__shape--one"></span><img src="img/dashboard-3.png"
+                alt="Leave management service screenshot" class="service-detail__image" /></div>
+          </div>
+          <div class="col-lg-6">
+            <div class="service-detail__content">
+              <h4 class="service-detail__title">Leave Management</h4>
+              <p class="service-detail__subtitle">Automate leave requests and approvals with policy rules.</p>
+              <ul class="service-detail__features">
+                <li>Approval workflows</li>
+                <li>Balance tracking</li>
+                <li>Policy validation</li>
+                <li>Approval workflows</li>
+                <li>Balance tracking</li>
+                <li>Policy validation</li>
+              </ul><a href="contact.html" class="btn btn-primary service-detail__cta">Request Demo</a>
+            </div>
+          </div>
+        </article>
+        <article class="service-detail service-detail--reverse row g-4 align-items-center wow fadeInUp"
+          data-wow-delay="0.16s">
+          <div class="col-lg-6">
+            <div class="service-detail__media"><span
+                class="service-detail__shape service-detail__shape--two"></span><img src="img/dashboard-1.png"
+                alt="Overtime tracking service screenshot" class="service-detail__image" /></div>
+          </div>
+          <div class="col-lg-6">
+            <div class="service-detail__content">
+              <h4 class="service-detail__title">Overtime Tracking</h4>
+              <p class="service-detail__subtitle">Capture overtime automatically and review totals quickly.</p>
+              <ul class="service-detail__features">
+                <li>Rule-based overtime</li>
+                <li>Supervisor approvals</li>
+                <li>Payroll-ready summaries</li>
+                <li>Rule-based overtime</li>
+                <li>Supervisor approvals</li>
+                <li>Payroll-ready summaries</li>
+              </ul><a href="contact.html" class="btn btn-primary service-detail__cta">Request Demo</a>
+            </div>
+          </div>
+        </article>
+        <article class="service-detail row g-4 align-items-center wow fadeInUp" data-wow-delay="0.18s">
+          <div class="col-lg-6">
+            <div class="service-detail__media"><span
+                class="service-detail__shape service-detail__shape--one"></span><img src="img/dashboard-2.png"
+                alt="Geofencing service screenshot" class="service-detail__image" /></div>
+          </div>
+          <div class="col-lg-6">
+            <div class="service-detail__content">
+              <h4 class="service-detail__title">Geofencing</h4>
+              <p class="service-detail__subtitle">Allow check-ins only inside approved work locations.</p>
+              <ul class="service-detail__features">
+                <li>Multi-site setup</li>
+                <li>Radius controls</li>
+                <li>Location audit trail</li>
+                <li>Multi-site setup</li>
+                <li>Radius controls</li>
+                <li>Location audit trail</li>
+              </ul><a href="contact.html" class="btn btn-primary service-detail__cta">Request Demo</a>
+            </div>
+          </div>
+        </article>
+        <article class="service-detail service-detail--reverse row g-4 align-items-center wow fadeInUp"
+          data-wow-delay="0.20s">
+          <div class="col-lg-6">
+            <div class="service-detail__media"><span
+                class="service-detail__shape service-detail__shape--two"></span><img src="img/dashboard-3.png"
+                alt="Biometric integration service screenshot" class="service-detail__image" /></div>
+          </div>
+          <div class="col-lg-6">
+            <div class="service-detail__content">
+              <h4 class="service-detail__title">Biometric Sync</h4>
+              <p class="service-detail__subtitle">Connect biometric devices to central attendance data.</p>
+              <ul class="service-detail__features">
+                <li>Device sync health</li>
+                <li>Centralized records</li>
+                <li>Mismatch alerts</li>
+                <li>Device sync health</li>
+                <li>Centralized records</li>
+                <li>Mismatch alerts</li>
+              </ul><a href="contact.html" class="btn btn-primary service-detail__cta">Request Demo</a>
+            </div>
+          </div>
+        </article>
+        <article class="service-detail row g-4 align-items-center wow fadeInUp" data-wow-delay="0.22s">
+          <div class="col-lg-6">
+            <div class="service-detail__media"><span
+                class="service-detail__shape service-detail__shape--one"></span><img src="img/dashboard-1.png"
+                alt="Team dashboard service screenshot" class="service-detail__image" /></div>
+          </div>
+          <div class="col-lg-6">
+            <div class="service-detail__content">
+              <h4 class="service-detail__title">Team Dashboard</h4>
+              <p class="service-detail__subtitle">Track attendance health across teams in real time.</p>
+              <ul class="service-detail__features">
+                <li>Presence KPIs</li>
+                <li>Branch widgets</li>
+                <li>Fast drill-down</li>
+                <li>Presence KPIs</li>
+                <li>Branch widgets</li>
+                <li>Fast drill-down</li>
+              </ul><a href="contact.html" class="btn btn-primary service-detail__cta">Request Demo</a>
+            </div>
+          </div>
+        </article>
+        <article class="service-detail service-detail--reverse row g-4 align-items-center wow fadeInUp"
+          data-wow-delay="0.24s">
+          <div class="col-lg-6">
+            <div class="service-detail__media"><span
+                class="service-detail__shape service-detail__shape--two"></span><img src="img/dashboard-2.png"
+                alt="Employee profile service screenshot" class="service-detail__image" /></div>
+          </div>
+          <div class="col-lg-6">
+            <div class="service-detail__content">
+              <h4 class="service-detail__title">Employee Profiles</h4>
+              <p class="service-detail__subtitle">Manage employee records with complete attendance history.</p>
+              <ul class="service-detail__features">
+                <li>Role assignment</li>
+                <li>Profile timeline</li>
+                <li>Secure document links</li>
+                <li>Role assignment</li>
+                <li>Profile timeline</li>
+                <li>Secure document links</li>
+              </ul><a href="contact.html" class="btn btn-primary service-detail__cta">Request Demo</a>
+            </div>
+          </div>
+        </article>
+        <article class="service-detail row g-4 align-items-center wow fadeInUp" data-wow-delay="0.26s">
+          <div class="col-lg-6">
+            <div class="service-detail__media"><span
+                class="service-detail__shape service-detail__shape--one"></span><img src="img/dashboard-3.png"
+                alt="Smart notifications service screenshot" class="service-detail__image" /></div>
+          </div>
+          <div class="col-lg-6">
+            <div class="service-detail__content">
+              <h4 class="service-detail__title">Smart Notifications</h4>
+              <p class="service-detail__subtitle">Get alerts for exceptions and missed check-ins instantly.</p>
+              <ul class="service-detail__features">
+                <li>Push and email alerts</li>
+                <li>Custom trigger rules</li>
+                <li>Priority escalation</li>
+                <li>Push and email alerts</li>
+                <li>Custom trigger rules</li>
+                <li>Priority escalation</li>
+              </ul><a href="contact.html" class="btn btn-primary service-detail__cta">Request Demo</a>
+            </div>
+          </div>
+        </article>
+        <article class="service-detail service-detail--reverse row g-4 align-items-center wow fadeInUp"
+          data-wow-delay="0.28s">
+          <div class="col-lg-6">
+            <div class="service-detail__media"><span
+                class="service-detail__shape service-detail__shape--two"></span><img src="img/dashboard-1.png"
+                alt="Payroll integration service screenshot" class="service-detail__image" /></div>
+          </div>
+          <div class="col-lg-6">
+            <div class="service-detail__content">
+              <h4 class="service-detail__title">Payroll Integration</h4>
+              <p class="service-detail__subtitle">Send approved attendance totals directly to payroll.</p>
+              <ul class="service-detail__features">
+                <li>Payroll export formats</li>
+                <li>Cutoff period setup</li>
+                <li>Allowance rule support</li>
+                <li>Payroll export formats</li>
+                <li>Cutoff period setup</li>
+                <li>Allowance rule support</li>
+              </ul><a href="contact.html" class="btn btn-primary service-detail__cta">Request Demo</a>
+            </div>
+          </div>
+        </article>
+        <article class="service-detail row g-4 align-items-center wow fadeInUp" data-wow-delay="0.30s">
+          <div class="col-lg-6">
+            <div class="service-detail__media"><span
+                class="service-detail__shape service-detail__shape--one"></span><img src="img/dashboard-2.png"
+                alt="Reports center service screenshot" class="service-detail__image" /></div>
+          </div>
+          <div class="col-lg-6">
+            <div class="service-detail__content">
+              <h4 class="service-detail__title">Reports Center</h4>
+              <p class="service-detail__subtitle">Build executive-ready reports with a few clicks.</p>
+              <ul class="service-detail__features">
+                <li>Custom date ranges</li>
+                <li>PDF and CSV output</li>
+                <li>Role-based report access</li>
+                <li>Custom date ranges</li>
+                <li>PDF and CSV output</li>
+                <li>Role-based report access</li>
+              </ul><a href="contact.html" class="btn btn-primary service-detail__cta">Request Demo</a>
+            </div>
+          </div>
+        </article>
+        <article class="service-detail service-detail--reverse row g-4 align-items-center wow fadeInUp"
+          data-wow-delay="0.32s">
+          <div class="col-lg-6">
+            <div class="service-detail__media"><span
+                class="service-detail__shape service-detail__shape--two"></span><img src="img/dashboard-3.png"
+                alt="Branch management service screenshot" class="service-detail__image" /></div>
+          </div>
+          <div class="col-lg-6">
+            <div class="service-detail__content">
+              <h4 class="service-detail__title">Branch Management</h4>
+              <p class="service-detail__subtitle">Control attendance policies across all company branches.</p>
+              <ul class="service-detail__features">
+                <li>Branch-level settings</li>
+                <li>Local admin permissions</li>
+                <li>Cross-branch insights</li>
+                <li>Branch-level settings</li>
+                <li>Local admin permissions</li>
+                <li>Cross-branch insights</li>
+              </ul><a href="contact.html" class="btn btn-primary service-detail__cta">Request Demo</a>
+            </div>
+          </div>
+        </article>
+        <article class="service-detail row g-4 align-items-center wow fadeInUp" data-wow-delay="0.34s">
+          <div class="col-lg-6">
+            <div class="service-detail__media"><span
+                class="service-detail__shape service-detail__shape--one"></span><img src="img/dashboard-1.png"
+                alt="Policy controls service screenshot" class="service-detail__image" /></div>
+          </div>
+          <div class="col-lg-6">
+            <div class="service-detail__content">
+              <h4 class="service-detail__title">Policy Controls</h4>
+              <p class="service-detail__subtitle">Define attendance rules that match business operations.</p>
+              <ul class="service-detail__features">
+                <li>Late and grace settings</li>
+                <li>Exception handling</li>
+                <li>Policy templates</li>
+                <li>Late and grace settings</li>
+                <li>Exception handling</li>
+                <li>Policy templates</li>
+              </ul><a href="contact.html" class="btn btn-primary service-detail__cta">Request Demo</a>
+            </div>
+          </div>
+        </article>
+        <article class="service-detail service-detail--reverse row g-4 align-items-center wow fadeInUp"
+          data-wow-delay="0.36s">
+          <div class="col-lg-6">
+            <div class="service-detail__media"><span
+                class="service-detail__shape service-detail__shape--two"></span><img src="img/dashboard-2.png"
+                alt="Audit trail service screenshot" class="service-detail__image" /></div>
+          </div>
+          <div class="col-lg-6">
+            <div class="service-detail__content">
+              <h4 class="service-detail__title">Audit Trail</h4>
+              <p class="service-detail__subtitle">Track every user action for compliance and transparency.</p>
+              <ul class="service-detail__features">
+                <li>Activity logs</li>
+                <li>Change history</li>
+                <li>Compliance-ready records</li>
+                <li>Activity logs</li>
+                <li>Change history</li>
+                <li>Compliance-ready records</li>
+              </ul><a href="contact.html" class="btn btn-primary service-detail__cta">Request Demo</a>
+            </div>
+          </div>
+        </article>
+        <article class="service-detail row g-4 align-items-center wow fadeInUp" data-wow-delay="0.38s">
+          <div class="col-lg-6">
+            <div class="service-detail__media"><span
+                class="service-detail__shape service-detail__shape--one"></span><img src="img/dashboard-3.png"
+                alt="Mobile self service screenshot" class="service-detail__image" /></div>
+          </div>
+          <div class="col-lg-6">
+            <div class="service-detail__content">
+              <h4 class="service-detail__title">Mobile Self-Service</h4>
+              <p class="service-detail__subtitle">Let employees handle attendance tasks quickly on mobile.</p>
+              <ul class="service-detail__features">
+                <li>Fast check-in flow</li>
+                <li>Leave request tracking</li>
+                <li>Personal attendance history</li>
+                <li>Fast check-in flow</li>
+                <li>Leave request tracking</li>
+                <li>Personal attendance history</li>
+              </ul><a href="contact.html" class="btn btn-primary service-detail__cta">Request Demo</a>
+            </div>
+          </div>
+        </article>
+      </div>
+    </div>
+  </section>
+  <!-- Why Choose Us End -->
+
+
+  <!-- Pricing Plans Start -->
+  <section class="pricing-future py-5">
+    <div class="container">
+
+      <div class="text-center mb-5">
+        <h2 class="fw-bold">Flexible <span class="text-uppercase text-primary bg-light-blue px-2">Pricing Plans</span>
+        </h2>
+        <p class="text-muted">Choose the perfect plan for your team, business, or organization.</p>
+      </div>
+
+      <div class="pricing-grid">
+
+        <!-- Plan 1 -->
+        <div class="price-card">
+          <div class="price-header">
+            <h4>Starter</h4>
+            <p>Best for small teams</p>
+          </div>
+          <div class="price-tag">
+            <h3>$19<span>/month</span></h3>
+          </div>
+          <ul class="price-features">
+            <li><i class="fas fa-check"></i> Up to 20 employees</li>
+            <li><i class="fas fa-check"></i> Mobile Attendance</li>
+            <li><i class="fas fa-check"></i> Basic Reporting</li>
+            <li><i class="fas fa-check"></i> Email Support</li>
+          </ul>
+          <button class="price-btn">Get Started</button>
+        </div>
+
+        <!-- Plan 2 (Popular) -->
+        <div class="price-card popular">
+          <div class="badge">Most Popular</div>
+          <div class="price-header">
+            <h4>Professional</h4>
+            <p>Perfect for growing businesses</p>
+          </div>
+          <div class="price-tag">
+            <h3>$49<span>/month</span></h3>
+          </div>
+          <ul class="price-features">
+            <li><i class="fas fa-check"></i> Up to 100 employees</li>
+            <li><i class="fas fa-check"></i> Biometric Integration</li>
+            <li><i class="fas fa-check"></i> Attendance Analytics</li>
+            <li><i class="fas fa-check"></i> Priority Support</li>
+          </ul>
+          <button class="price-btn">Choose Plan</button>
+        </div>
+
+        <!-- Plan 3 -->
+        <div class="price-card">
+          <div class="price-header">
+            <h4>Enterprise</h4>
+            <p>Tailored for large organizations</p>
+          </div>
+          <div class="price-tag">
+            <h3>Custom</h3>
+          </div>
+          <ul class="price-features">
+            <li><i class="fas fa-check"></i> Unlimited employees</li>
+            <li><i class="fas fa-check"></i> Advanced HR Insights</li>
+            <li><i class="fas fa-check"></i> Dedicated Account Manager</li>
+            <li><i class="fas fa-check"></i> On-site Support</li>
+          </ul>
+          <button class="price-btn">Contact Sales</button>
+        </div>
+
       </div>
 
     </div>
-  </div>
+  </section>
 
-  <!-- Footer Bottom -->
-  <div class="container wow fadeIn" data-wow-delay="0.1s">
-    <div class="copyright">
-      <div class="row justify-content-center">
-        <div class="col-md-6 text-center mb-3 mb-md-0">
-          &copy; <a class="border-bottom" href="#">Techsup Tmam</a>, All Rights Reserved.
+
+  <!-- Pricing Plans End -->
+
+  <!-- Newsletter Start -->
+  <div class="container-fluid newsletter p-0">
+    <div class="container p-0">
+      <div class="row g-0 align-items-center">
+        <div class="col-md-5 ps-lg-0 text-start wow fadeIn" data-wow-delay="0.2s">
+          <img class="img-fluid w-100" src="img/newsletter-2.jpg" alt="Newsletter" />
         </div>
-        <!-- <div class="col-md-6 text-center text-md-end">
+        <div class="col-md-7 py-5 newsletter-text wow fadeIn" data-wow-delay="0.5s">
+          <div class="p-5">
+            <h1 class="mb-5">
+              Subscribe the
+              <span class="text-uppercase text-primary bg-white px-2">Newsletter</span>
+            </h1>
+            <div class="position-relative w-100 mb-2">
+              <input class="form-control border-0 w-100 ps-4 pe-5" type="text" placeholder="Enter Your Email"
+                style="height: 60px" />
+              <button type="button" class="btn shadow-none position-absolute top-0 end-0 mt-2 me-2">
+                <i class="fa fa-paper-plane text-primary fs-4"></i>
+              </button>
+            </div>
+            <p class="mb-0">Diam sed sed dolor stet amet eirmod</p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+  <!-- Newsletter End -->
+
+  <!-- Footer Start -->
+  <div class="container-fluid bg-dark text-white-50 footer pt-5">
+    <div class="container py-5">
+      <div class="row g-5">
+
+        <!-- Logo & About -->
+        <div class="col-md-6 col-lg-5 wow fadeIn" data-wow-delay="0.1s">
+          <a href="index.html" class="d-inline-block mb-3">
+            <img src="img/logo.png" alt="Logo">
+          </a>
+          <p class="mb-4">
+            Tmam Tracking provides advanced real-time tracking solutions for
+            people, pets, vehicles, and valuable assets. Smart, secure, and
+            accessible from anywhere at any time.
+          </p>
+        </div>
+
+        <!-- Contact Info -->
+        <div class="col-md-6 col-lg-4 wow fadeIn" data-wow-delay="0.3s">
+          <h5 class="text-white mb-4">Get In Touch</h5>
+          <p><i class="fa fa-map-marker-alt me-3"></i>12 Cerecon - 4th Floor - Office No. 403, Olaya St, Riyadh 12241,
+            Saudi Arabia.</p>
+          <p><i class="fa fa-phone-alt me-3"></i>+966 920015409</p>
+          <p><i class="fa fa-envelope me-3"></i>info@techsupbusiness.com</p>
+          <div class="d-flex pt-2">
+            <a class="btn btn-outline-primary btn-square border-2 me-2" href="#"><i class="fab fa-twitter"></i></a>
+            <a class="btn btn-outline-primary btn-square border-2 me-2" href="#"><i class="fab fa-facebook-f"></i></a>
+            <a class="btn btn-outline-primary btn-square border-2 me-2" href="#"><i class="fab fa-instagram"></i></a>
+            <a class="btn btn-outline-primary btn-square border-2 me-2" href="#"><i class="fab fa-youtube"></i></a>
+            <a class="btn btn-outline-primary btn-square border-2 me-2" href="#"><i class="fab fa-linkedin-in"></i></a>
+          </div>
+        </div>
+
+        <!-- Important Links -->
+        <div class="col-md-6 col-lg-3 wow fadeIn" data-wow-delay="0.5s">
+          <h5 class="text-white mb-4">Quick Links</h5>
+          <a class="btn btn-link" href="#">About Us</a>
+          <a class="btn btn-link" href="#">Features</a>
+          <a class="btn btn-link" href="#">Pricing</a>
+          <a class="btn btn-link" href="#">Support</a>
+          <a class="btn btn-link" href="#">Terms & Conditions</a>
+        </div>
+
+      </div>
+    </div>
+
+    <!-- Footer Bottom -->
+    <div class="container wow fadeIn" data-wow-delay="0.1s">
+      <div class="copyright">
+        <div class="row justify-content-center">
+          <div class="col-md-6 text-center mb-3 mb-md-0">
+            &copy; <a class="border-bottom" href="#">Techsup Tmam</a>, All Rights Reserved.
+          </div>
+          <!-- <div class="col-md-6 text-center text-md-end">
           <div class="footer-menu">
             <a href="#">Home</a>
             <a href="#">Cookies</a>
@@ -689,27 +790,26 @@
             <a href="#">FAQs</a>
           </div>
         </div> -->
+        </div>
       </div>
     </div>
   </div>
-</div>
 
-    <!-- Footer End -->
+  <!-- Footer End -->
 
-    <!-- Back to Top -->
-    <a href="#" class="btn btn-lg btn-primary btn-lg-square back-to-top"
-      ><i class="bi bi-arrow-up"></i
-    ></a>
+  <!-- Back to Top -->
+  <a href="#" class="btn btn-lg btn-primary btn-lg-square back-to-top"><i class="bi bi-arrow-up"></i></a>
 
-    <!-- JavaScript Libraries -->
-    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.1/jquery.min.js"></script>
-    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0/dist/js/bootstrap.bundle.min.js"></script>
-    <script src="lib/wow/wow.min.js"></script>
-    <script src="lib/easing/easing.min.js"></script>
-    <script src="lib/waypoints/waypoints.min.js"></script>
-    <script src="lib/owlcarousel/owl.carousel.min.js"></script>
+  <!-- JavaScript Libraries -->
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.1/jquery.min.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0/dist/js/bootstrap.bundle.min.js"></script>
+  <script src="lib/wow/wow.min.js"></script>
+  <script src="lib/easing/easing.min.js"></script>
+  <script src="lib/waypoints/waypoints.min.js"></script>
+  <script src="lib/owlcarousel/owl.carousel.min.js"></script>
 
-    <!-- Template Javascript -->
-    <script src="js/main.js"></script>
-  </body>
+  <!-- Template Javascript -->
+  <script src="js/main.js"></script>
+</body>
+
 </html>
