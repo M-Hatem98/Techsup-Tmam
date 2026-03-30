@@ -3,7 +3,7 @@
 
 <head>
   <meta charset="utf-8" />
-  <title>Tmam HR System</title>
+  <title>Tamam HR System</title>
   <meta content="width=device-width, initial-scale=1.0" name="viewport" />
   <meta content="" name="keywords" />
   <meta content="" name="description" />
@@ -46,7 +46,7 @@
     <div class="container">
       <nav class="navbar navbar-expand-lg navbar-light border-bottom border-2 border-white py-0">
         <a href="index.html" class="navbar-brand">
-          <img id="Logo" src="img/logo-dark.png" alt="Tmam Logo" width="80px" height="auto" />
+          <img id="Logo" src="img/logo-dark.png" alt="Tamam Logo" width="80px" height="auto" />
         </a>
         <button type="button" class="navbar-toggler ms-auto me-0" data-bs-toggle="collapse"
           data-bs-target="#navbarCollapse">
@@ -55,16 +55,68 @@
         <div class="collapse navbar-collapse" id="navbarCollapse">
           <div class="navbar-nav ms-auto">
             <a href="index.html" class="nav-item nav-link active">Home</a>
-            <a href="about.html" class="nav-item nav-link">About</a>
-            <a href="service.html" class="nav-item nav-link">Services</a>
+            <a href="#how-it-works" class="nav-item nav-link">How It Works</a>
+            <a href="#why-choose" class="nav-item nav-link">Why Choose Us</a>
+            <a href="#pricing" class="nav-item nav-link">Pricing</a>
             <a href="contact.html" class="nav-item nav-link">Contact</a>
+            <a href="#" class="btn btn-primary ms-3 get-started-btn" data-bs-toggle="modal" data-bs-target="#getStartedModal">
+  Get Started
+</a>
           </div>
         </div>
       </nav>
     </div>
   </div>
-  <!-- Navbar End -->
 
+  <!-- Modal -->
+  <div class="modal fade" id="getStartedModal" tabindex="-1">
+  <div class="modal-dialog modal-dialog-centered">
+    <div class="modal-content get-started-modal">
+
+      <div class="modal-header border-0">
+        <h5 class="modal-title fw-bold">Start with Tamam </h5>
+        <button type="button" class="btn-close" data-bs-toggle="modal" data-bs-target="#getStartedModal"></button>
+      </div>
+
+      <div class="modal-body">
+        <form id="getStartedForm">
+
+          <div class="row g-3">
+
+            <div class="col-md-6">
+              <input type="text" class="form-control" id="firstName" placeholder="First Name">
+            </div>
+
+            <div class="col-md-6">
+              <input type="text" class="form-control" id="lastName" placeholder="Last Name">
+            </div>
+
+            <div class="col-12">
+              <input type="email" class="form-control" id="email" placeholder="Email Address">
+              <small class="error-text"></small>
+            </div>
+
+            <div class="col-12">
+              <input type="text" class="form-control" id="phone" placeholder="Phone Number">
+            </div>
+
+            <div class="col-12">
+              <input type="text" class="form-control" id="company" placeholder="Company Name">
+            </div>
+
+            <div class="col-12">
+              <button class="btn btn-primary w-100 submit-btn">Get Started</button>
+            </div>
+
+          </div>
+
+        </form>
+      </div>
+
+    </div>
+  </div>
+</div>
+  <!-- Navbar End -->
   <!-- Hero Start -->
   <section class="landing-hero landing-hero--plain">
     <div class="container py-5">
@@ -76,7 +128,7 @@
           </p>
 
           <h1 class="landing-hero__title display-4 fw-bold animated slideInRight" style="animation-delay: 0.1s">
-            Tmam <span class="text-primary">HR System</span>
+            Tamam <span class="text-primary">HR System</span>
           </h1>
 
           <p class="landing-hero__lead animated slideInRight" style="animation-delay: 0.15s">
@@ -111,7 +163,7 @@
                   <i class="far fa-building"></i>
                 </div>
                 <div class="landing-hero__stat-text">
-                  <div class="landing-hero__stat-value">+50</div>
+                  <div class="landing-hero__stat-value counter" data-target="50">0</div>
                   <div class="landing-hero__stat-label">Companies</div>
                 </div>
               </div>
@@ -122,7 +174,7 @@
                   <i class="fa fa-user"></i>
                 </div>
                 <div class="landing-hero__stat-text">
-                  <div class="landing-hero__stat-value">+100K</div>
+                  <div class="landing-hero__stat-value counter" data-target="10000">0</div>
                   <div class="landing-hero__stat-label">Employees</div>
                 </div>
               </div>
@@ -133,7 +185,7 @@
                   <i class="fa fa-hand-point-right"></i>
                 </div>
                 <div class="landing-hero__stat-text">
-                  <div class="landing-hero__stat-value">+10M</div>
+                  <div class="landing-hero__stat-value counter" data-target="1000000">0</div>
                   <div class="landing-hero__stat-label">Check-Ins</div>
                 </div>
               </div>
@@ -172,9 +224,8 @@
     </div>
   </section>
   <!-- Hero End -->
-
   <!-- How It Works -->
-  <section class="how-it-works py-5">
+  <section class="how-it-works py-5" id="how-it-works">
     <div class="container">
       <div class="text-center mb-5 wow fadeIn" data-wow-delay="0.1s">
         <h2 class="fw-bold text-primary">
@@ -193,7 +244,7 @@
               <div class="how-step__badge">Step 1</div>
               <h5 class="how-step__title">Download App</h5>
               <p class="how-step__description">
-                Download Tmam from the App Store or Google Play and install it on your device.
+                Download Tamam from the App Store or Google Play and install it on your device.
               </p>
             </div>
             <div class="how-step__device">
@@ -255,9 +306,8 @@
     </div>
   </section>
   <!-- How It Works End -->
-
   <!-- Why Choose Us Start -->
-  <section class="why-choose-showcase py-5">
+  <section class="why-choose-showcase py-5" id="why-choose-us">
     <div class="container">
       <div class="why-choose-showcase__intro text-center mb-5 wow fadeInUp" data-wow-delay="0.1s">
         <p class="why-choose-showcase__eyebrow">Why Choose Us</p>
@@ -265,7 +315,7 @@
           <span class="scribble-word">Powerful</span> attendance platform built for real HR teams
         </h2>
         <p class="why-choose-showcase__description">
-          Tmam gives you speed, control, and clarity across every attendance workflow.
+          Tamam gives you speed, control, and clarity across every attendance workflow.
           From employee actions to management reports, every module is designed for real results.
         </p>
       </div>
@@ -315,7 +365,8 @@
                 <li>Smart shift templates</li>
                 <li>Conflict detection</li>
                 <li>Bulk schedule publishing</li>
-              </ul><a href="contact.html" class="btn btn-primary service-detail__cta">Request Demo</a>
+              </ul>
+              <a href="#" class="btn btn-primary service-detail__cta"data-bs-toggle="modal" data-bs-target="#getStartedModal">Request Demo</a>
             </div>
           </div>
         </article>
@@ -337,7 +388,7 @@
                 <li>Live attendance feed</li>
                 <li>Filter by team and branch</li>
                 <li>Export reports instantly</li>
-              </ul><a href="contact.html" class="btn btn-primary service-detail__cta">Request Demo</a>
+              </ul><a href="#" class="btn btn-primary service-detail__cta"data-bs-toggle="modal" data-bs-target="#getStartedModal">Request Demo</a>
             </div>
           </div>
         </article>
@@ -358,7 +409,7 @@
                 <li>Approval workflows</li>
                 <li>Balance tracking</li>
                 <li>Policy validation</li>
-              </ul><a href="contact.html" class="btn btn-primary service-detail__cta">Request Demo</a>
+              </ul><a href="#" class="btn btn-primary service-detail__cta"data-bs-toggle="modal" data-bs-target="#getStartedModal">Request Demo</a>
             </div>
           </div>
         </article>
@@ -380,7 +431,7 @@
                 <li>Rule-based overtime</li>
                 <li>Supervisor approvals</li>
                 <li>Payroll-ready summaries</li>
-              </ul><a href="contact.html" class="btn btn-primary service-detail__cta">Request Demo</a>
+              </ul><a href="#" class="btn btn-primary service-detail__cta"data-bs-toggle="modal" data-bs-target="#getStartedModal">Request Demo</a>
             </div>
           </div>
         </article>
@@ -401,7 +452,7 @@
                 <li>Multi-site setup</li>
                 <li>Radius controls</li>
                 <li>Location audit trail</li>
-              </ul><a href="contact.html" class="btn btn-primary service-detail__cta">Request Demo</a>
+              </ul><a href="#" class="btn btn-primary service-detail__cta"data-bs-toggle="modal" data-bs-target="#getStartedModal">Request Demo</a>
             </div>
           </div>
         </article>
@@ -423,7 +474,7 @@
                 <li>Device sync health</li>
                 <li>Centralized records</li>
                 <li>Mismatch alerts</li>
-              </ul><a href="contact.html" class="btn btn-primary service-detail__cta">Request Demo</a>
+              </ul><a href="#" class="btn btn-primary service-detail__cta"data-bs-toggle="modal" data-bs-target="#getStartedModal">Request Demo</a>
             </div>
           </div>
         </article>
@@ -444,7 +495,7 @@
                 <li>Presence KPIs</li>
                 <li>Branch widgets</li>
                 <li>Fast drill-down</li>
-              </ul><a href="contact.html" class="btn btn-primary service-detail__cta">Request Demo</a>
+              </ul><a href="#" class="btn btn-primary service-detail__cta"data-bs-toggle="modal" data-bs-target="#getStartedModal">Request Demo</a>
             </div>
           </div>
         </article>
@@ -466,7 +517,7 @@
                 <li>Role assignment</li>
                 <li>Profile timeline</li>
                 <li>Secure document links</li>
-              </ul><a href="contact.html" class="btn btn-primary service-detail__cta">Request Demo</a>
+              </ul><a href="#" class="btn btn-primary service-detail__cta">Request Demo</a>
             </div>
           </div>
         </article>
@@ -487,7 +538,7 @@
                 <li>Push and email alerts</li>
                 <li>Custom trigger rules</li>
                 <li>Priority escalation</li>
-              </ul><a href="contact.html" class="btn btn-primary service-detail__cta">Request Demo</a>
+              </ul><a href="#" class="btn btn-primary service-detail__cta"data-bs-toggle="modal" data-bs-target="#getStartedModal">Request Demo</a>
             </div>
           </div>
         </article>
@@ -509,7 +560,7 @@
                 <li>Payroll export formats</li>
                 <li>Cutoff period setup</li>
                 <li>Allowance rule support</li>
-              </ul><a href="contact.html" class="btn btn-primary service-detail__cta">Request Demo</a>
+              </ul><a href="#" class="btn btn-primary service-detail__cta"data-bs-toggle="modal" data-bs-target="#getStartedModal">Request Demo</a>
             </div>
           </div>
         </article>
@@ -530,7 +581,7 @@
                 <li>Custom date ranges</li>
                 <li>PDF and CSV output</li>
                 <li>Role-based report access</li>
-              </ul><a href="contact.html" class="btn btn-primary service-detail__cta">Request Demo</a>
+              </ul><a href="#" class="btn btn-primary service-detail__cta"data-bs-toggle="modal" data-bs-target="#getStartedModal">Request Demo</a>
             </div>
           </div>
         </article>
@@ -552,7 +603,7 @@
                 <li>Branch-level settings</li>
                 <li>Local admin permissions</li>
                 <li>Cross-branch insights</li>
-              </ul><a href="contact.html" class="btn btn-primary service-detail__cta">Request Demo</a>
+              </ul><a href="#" class="btn btn-primary service-detail__cta"data-bs-toggle="modal" data-bs-target="#getStartedModal">Request Demo</a>
             </div>
           </div>
         </article>
@@ -573,7 +624,7 @@
                 <li>Late and grace settings</li>
                 <li>Exception handling</li>
                 <li>Policy templates</li>
-              </ul><a href="contact.html" class="btn btn-primary service-detail__cta">Request Demo</a>
+              </ul><a href="#" class="btn btn-primary service-detail__cta"data-bs-toggle="modal" data-bs-target="#getStartedModal">Request Demo</a>
             </div>
           </div>
         </article>
@@ -595,7 +646,7 @@
                 <li>Activity logs</li>
                 <li>Change history</li>
                 <li>Compliance-ready records</li>
-              </ul><a href="contact.html" class="btn btn-primary service-detail__cta">Request Demo</a>
+              </ul><a href="#" class="btn btn-primary service-detail__cta"data-bs-toggle="modal" data-bs-target="#getStartedModal">Request Demo</a>
             </div>
           </div>
         </article>
@@ -616,7 +667,7 @@
                 <li>Fast check-in flow</li>
                 <li>Leave request tracking</li>
                 <li>Personal attendance history</li>
-              </ul><a href="contact.html" class="btn btn-primary service-detail__cta">Request Demo</a>
+              </ul><a href="#" class="btn btn-primary service-detail__cta"data-bs-toggle="modal" data-bs-target="#getStartedModal">Request Demo</a>
             </div>
           </div>
         </article>
@@ -624,10 +675,38 @@
     </div>
   </section>
   <!-- Why Choose Us End -->
+      <!-- CTA Section Start -->
+    <section class="cta-section py-5">
+  <div class="container">
+    <div class="cta-card text-center">
 
+      <div class="cta-content">
+        <h2 class="cta-title">
+          Ready to Transform Your <span class="text-primary">HR Workflow</span>?
+        </h2>
 
+        <p class="cta-description">
+          Start managing attendance, employees, and insights in one powerful platform.
+          Join hundreds of companies already using Tamam.
+        </p>
+
+        <div class="cta-actions">
+          <a href="contact.html" class="btn btn-primary cta-btn-primary">
+            Get Started Free
+          </a>
+
+          <a href="#" class="btn btn-outline-primary cta-btn-secondary"data-bs-toggle="modal" data-bs-target="#getStartedModal">
+            Request Demo
+          </a>
+        </div>
+      </div>
+
+    </div>
+  </div>
+</section>
+   <!-- CTA Section End -->
   <!-- Pricing Plans Start -->
-  <section class="pricing-future py-5">
+  <section class="pricing-future reveal py-5" id="pricing">
     <div class="container">
 
       <div class="text-center mb-5">
@@ -639,7 +718,7 @@
       <div class="pricing-grid">
 
         <!-- Plan 1 -->
-        <div class="price-card">
+        <div class="price-card reveal">
           <div class="price-header">
             <h4>Starter</h4>
             <p>Best for small teams</p>
@@ -657,7 +736,7 @@
         </div>
 
         <!-- Plan 2 (Popular) -->
-        <div class="price-card popular">
+        <div class="price-card popular reveal">
           <div class="badge">Most Popular</div>
           <div class="price-header">
             <h4>Professional</h4>
@@ -676,7 +755,7 @@
         </div>
 
         <!-- Plan 3 -->
-        <div class="price-card">
+        <div class="price-card reveal">
           <div class="price-header">
             <h4>Enterprise</h4>
             <p>Tailored for large organizations</p>
@@ -697,37 +776,54 @@
 
     </div>
   </section>
-
-
   <!-- Pricing Plans End -->
+<!-- Newsletter Start -->
+ <section class="newsletter-section py-5">
+  <div class="container">
+    <div class="newsletter-card text-center">
 
-  <!-- Newsletter Start -->
-  <div class="container-fluid newsletter p-0">
-    <div class="container p-0">
-      <div class="row g-0 align-items-center">
-        <div class="col-md-5 ps-lg-0 text-start wow fadeIn" data-wow-delay="0.2s">
-          <img class="img-fluid w-100" src="img/newsletter-2.jpg" alt="Newsletter" />
-        </div>
-        <div class="col-md-7 py-5 newsletter-text wow fadeIn" data-wow-delay="0.5s">
-          <div class="p-5">
-            <h1 class="mb-5">
-              Subscribe the
-              <span class="text-uppercase text-primary bg-white px-2">Newsletter</span>
-            </h1>
-            <div class="position-relative w-100 mb-2">
-              <input class="form-control border-0 w-100 ps-4 pe-5" type="text" placeholder="Enter Your Email"
-                style="height: 60px" />
-              <button type="button" class="btn shadow-none position-absolute top-0 end-0 mt-2 me-2">
-                <i class="fa fa-paper-plane text-primary fs-4"></i>
-              </button>
-            </div>
-            <p class="mb-0">Diam sed sed dolor stet amet eirmod</p>
-          </div>
-        </div>
+      <div class="newsletter-content">
+        <h3 class="newsletter-title">
+          Stay Updated with <span class="text-primary">Tmam</span>
+        </h3>
+
+        <p class="newsletter-description">
+          Get the latest updates, HR tips, and product features delivered straight to your inbox.
+        </p>
+
+       <form class="newsletter-form" novalidate>
+  <div class="newsletter-input-group">
+
+    <div class="newsletter-field">
+      <input 
+        id="newsletter-input"
+        type="email" 
+        class="newsletter-input" 
+        placeholder="Enter your email address"
+        required
+      >
+      <small class="newsletter-error"></small>
+
+      <!-- Suggestions -->
+      <div class="email-suggestions"></div>
+    </div>
+
+    <button type="submit" class="newsletter-btn">
+      Subscribe
+    </button>
+
+  </div>
+</form>
+
+        <p class="newsletter-note">
+          No spam. Only valuable updates.
+        </p>
       </div>
+
     </div>
   </div>
-  <!-- Newsletter End -->
+</section>
+<!-- Newsletter End -->
 
   <!-- Footer Start -->
   <div class="container-fluid bg-dark text-white-50 footer pt-5">
@@ -740,7 +836,7 @@
             <img src="img/logo.png" alt="Logo">
           </a>
           <p class="mb-4">
-            Tmam Tracking provides advanced real-time tracking solutions for
+            Tamam Tracking provides advanced real-time tracking solutions for
             people, pets, vehicles, and valuable assets. Smart, secure, and
             accessible from anywhere at any time.
           </p>
@@ -780,7 +876,7 @@
       <div class="copyright">
         <div class="row justify-content-center">
           <div class="col-md-6 text-center mb-3 mb-md-0">
-            &copy; <a class="border-bottom" href="#">Techsup Tmam</a>, All Rights Reserved.
+            &copy; <a class="border-bottom" href="#">Techsup Tamam</a>, All Rights Reserved.
           </div>
           <!-- <div class="col-md-6 text-center text-md-end">
           <div class="footer-menu">
