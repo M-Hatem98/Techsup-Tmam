@@ -1302,8 +1302,8 @@ html {
 
 .contact-section {
   background: #f8fafc;
+  animation: fadeInUp 0.6s ease;
 }
-
 /* Cards */
 .contact-card,
 .contact-form-card {
@@ -1391,3 +1391,47 @@ html {
   color: red;
   font-size: 12px;
 }
+
+
+
+.contact-hero h1 {
+  font-size: 42px;
+}
+
+
+.auth {
+  background: linear-gradient(135deg, transparent, rgba(19,88,41,0.1));
+      min-height: 100vh;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+}
+
+.auth-card {
+      background: #fff;
+      border-radius: 15px;
+      padding: 40px;
+      width: 100%;
+      max-width: 420px;
+      box-shadow: 0 10px 40px rgba(0,0,0,0.1);
+    }
+
+    .auth-title {
+      font-weight: bold;
+      margin-bottom: 25px;
+    }
+
+    .form-control {
+      height: 50px;
+      border-radius: 10px;
+    }
+
+    .auth-btn {
+      height: 50px;
+      border-radius: 10px;
+      font-weight: 600;
+    }
+
+    .auth-link {
+      font-size: 14px;
+    }

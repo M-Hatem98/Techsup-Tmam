@@ -42,58 +42,81 @@
     <!-- Spinner End -->
 
 
-    <!-- Navbar Start -->
-    <div class="container-fluid sticky-top">
-        <div class="container">
-            <nav class="navbar navbar-expand-lg navbar-light border-bottom border-2 border-white">
-                <a href="index.html" class="navbar-brand">
-                   <img
-              id="Logo"
-              src="img/logo.png"
-              alt="Techsup Logo"
-              width="140px"
-              height="auto"
-            />
-                </a>
-                <button type="button" class="navbar-toggler ms-auto me-0" data-bs-toggle="collapse"
-                    data-bs-target="#navbarCollapse">
-                    <span class="navbar-toggler-icon"></span>
-                </button>
-                <div class="collapse navbar-collapse" id="navbarCollapse">
-                    <div class="navbar-nav ms-auto">
-                        <a href="index.html" class="nav-item nav-link">Home</a>
-                        <a href="about.html" class="nav-item nav-link">About</a>
-                        <a href="service.html" class="nav-item nav-link">Services</a>
-                        <a href="contact.html" class="nav-item nav-link">Contact</a>
-                    </div>
-                </div>
-            </nav>
+<!-- Navbar Start -->
+  <div class="container-fluid sticky-top">
+    <div class="container">
+      <nav class="navbar navbar-expand-lg navbar-light border-bottom border-2 border-white py-0">
+        <a href="index.html" class="navbar-brand">
+          <img id="Logo" src="img/logo-dark.png" alt="Tamam Logo" width="80px" height="auto" />
+        </a>
+        <button type="button" class="navbar-toggler ms-auto me-0" data-bs-toggle="collapse"
+          data-bs-target="#navbarCollapse">
+          <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse" id="navbarCollapse">
+          <div class="navbar-nav ms-auto">
+            <a href="index.html" class="nav-item nav-link">Home</a>
+            <a href="#how-it-works" class="nav-item nav-link">How It Works</a>
+            <a href="#why-choose-us" class="nav-item nav-link">Why Choose Us</a>
+            <a href="#pricing" class="nav-item nav-link">Pricing</a>
+            <a href="contact.html" class="nav-item nav-link active">Contact</a>
+            <a href="#" class="btn btn-primary ms-3 get-started-btn" data-bs-toggle="modal" data-bs-target="#getStartedModal">
+  Get Started
+</a>
+          </div>
         </div>
+      </nav>
     </div>
-    <!-- Navbar End -->
+  </div>
+ <!-- Modal -->
+  <div class="modal fade" id="getStartedModal" tabindex="-1">
+  <div class="modal-dialog modal-dialog-centered">
+    <div class="modal-content get-started-modal">
 
+      <div class="modal-header border-0">
+        <h5 class="modal-title fw-bold">Start with Tamam </h5>
+        <button type="button" class="btn-close" data-bs-toggle="modal" data-bs-target="#getStartedModal"></button>
+      </div>
 
-    <!-- Hero Start -->
-    <div class="container-fluid pb-5 hero-header">
-        <div class="container py-5">
-            <div class="row g-3 align-items-center">
-                <div class="col-lg-6 text-center text-lg-start">
-                    <h1 class="display-1 mb-0 text-white animated slideInLeft">404 Error</h1>
-                </div>
-                <div class="col-lg-6 animated slideInRight">
-                    <nav aria-label="breadcrumb">
-                        <ol class="breadcrumb justify-content-center justify-content-lg-end mb-0">
-                            <li class="breadcrumb-item"><a class="text-primary" href="#">Home</a></li>
-                            <li class="breadcrumb-item"><a class="text-primary" href="#">Pages</a></li>
-                            <li class="breadcrumb-item text-secondary active" aria-current="page">404 Error</li>
-                        </ol>
-                    </nav>
-                </div>
+      <div class="modal-body">
+        <form id="getStartedForm">
+
+          <div class="row g-3">
+
+            <div class="col-md-6">
+              <input type="text" class="form-control" id="firstName" placeholder="First Name">
             </div>
-        </div>
-    </div>
-    <!-- Hero End -->
 
+            <div class="col-md-6">
+              <input type="text" class="form-control" id="lastName" placeholder="Last Name">
+            </div>
+
+            <div class="col-12">
+              <input type="email" class="form-control" id="email" placeholder="Email Address">
+              <small class="error-text"></small>
+            </div>
+
+            <div class="col-12">
+              <input type="text" class="form-control" id="phone" placeholder="Phone Number">
+            </div>
+
+            <div class="col-12">
+              <input type="text" class="form-control" id="company" placeholder="Company Name">
+            </div>
+
+            <div class="col-12">
+              <button class="btn btn-primary w-100 submit-btn">Get Started</button>
+            </div>
+
+          </div>
+
+        </form>
+      </div>
+
+    </div>
+  </div>
+</div>
+<!-- Navbar End -->
 
     <!-- 404 Start -->
     <div class="container-fluid py-5 wow fadeIn" data-wow-delay="0.1s">
@@ -110,115 +133,65 @@
         </div>
     </div>
     <!-- 404 End -->
-        
+      
 
-    <!-- Newsletter Start -->
-    <div class="container-fluid newsletter p-0">
-      <div class="container p-0">
-        <div class="row g-0 align-items-center">
-          <div
-            class="col-md-5 ps-lg-0 text-start wow fadeIn"
-            data-wow-delay="0.2s"
-          >
-            <img class="img-fluid w-100" src="img/newsletter-2.jpg" alt="Newsletter" />
-          </div>
-          <div
-            class="col-md-7 py-5 newsletter-text wow fadeIn"
-            data-wow-delay="0.5s"
-          >
-            <div class="p-5">
-              <h1 class="mb-5">
-                Subscribe the
-                <span class="text-uppercase text-primary bg-white px-2"
-                  >Newsletter</span
-                >
-              </h1>
-              <div class="position-relative w-100 mb-2">
-                <input
-                  class="form-control border-0 w-100 ps-4 pe-5"
-                  type="text"
-                  placeholder="Enter Your Email"
-                  style="height: 60px"
-                />
-                <button
-                  type="button"
-                  class="btn shadow-none position-absolute top-0 end-0 mt-2 me-2"
-                >
-                  <i class="fa fa-paper-plane text-primary fs-4"></i>
-                </button>
-              </div>
-              <p class="mb-0">Diam sed sed dolor stet amet eirmod</p>
-            </div>
+     <!-- Footer Start -->
+  <div class="container-fluid bg-dark text-white-50 footer pt-5">
+    <div class="container py-5">
+      <div class="row g-5">
+
+        <!-- Logo & About -->
+        <div class="col-md-6 col-lg-5 wow fadeIn" data-wow-delay="0.1s">
+          <a href="index.html" class="d-flex justify-content-center d-inline-block mb-3">
+            <img src="img/logo.png" width="120px" alt="Logo">
+          </a>
+          <p class="mb-4">
+            Tamam Tracking provides advanced real-time tracking solutions for
+            people, pets, vehicles, and valuable assets. Smart, secure, and
+            accessible from anywhere at any time.
+          </p>
+        </div>
+
+        <!-- Contact Info -->
+        <div class="col-md-6 col-lg-4 wow fadeIn" data-wow-delay="0.3s">
+          <h5 class="text-white mb-4">Get In Touch</h5>
+          <p><i class="fa fa-map-marker-alt me-3"></i>12 Cerecon - 4th Floor - Office No. 403, Olaya St, Riyadh 12241,
+            Saudi Arabia.</p>
+          <p><i class="fa fa-phone-alt me-3"></i>+966 920015409</p>
+          <p><i class="fa fa-envelope me-3"></i>info@techsupbusiness.com</p>
+          <div class="d-flex pt-2">
+            <a class="btn btn-outline-primary btn-square border-2 me-2" href="#"><i class="fab fa-twitter"></i></a>
+            <a class="btn btn-outline-primary btn-square border-2 me-2" href="#"><i class="fab fa-facebook-f"></i></a>
+            <a class="btn btn-outline-primary btn-square border-2 me-2" href="#"><i class="fab fa-instagram"></i></a>
+            <a class="btn btn-outline-primary btn-square border-2 me-2" href="#"><i class="fab fa-youtube"></i></a>
+            <a class="btn btn-outline-primary btn-square border-2 me-2" href="#"><i class="fab fa-linkedin-in"></i></a>
           </div>
         </div>
+
+        <!-- Important Links -->
+        <div class="col-md-6 col-lg-3 wow fadeIn" data-wow-delay="0.5s">
+          <h5 class="text-white mb-4">Quick Links</h5>
+          <a class="btn btn-link" href="index.html">Home</a>
+          <a class="btn btn-link" href="index.html#how-it-works">How It Works</a>
+          <a class="btn btn-link" href="index.html#why-choose-us">Why Choose US</a>
+          <a class="btn btn-link" href="index.html#pricing">Pricing</a>
+          <a class="btn btn-link" href="contact.html">Contact Us</a>
+        </div>
+
       </div>
     </div>
-    <!-- Newsletter End -->
 
-    <!-- Footer Start -->
-    <div class="container-fluid bg-dark text-white-50 footer pt-5">
-  <div class="container py-5">
-    <div class="row g-5">
-
-      <!-- Logo & About -->
-      <div class="col-md-6 col-lg-5 wow fadeIn" data-wow-delay="0.1s">
-        <a href="index.html" class="d-inline-block mb-3">
-            <img src="img/logo.png" alt="Logo">
-        </a>
-        <p class="mb-4">
-          Techsup Tracking provides advanced real-time tracking solutions for
-          people, pets, vehicles, and valuable assets. Smart, secure, and
-          accessible from anywhere at any time.
-        </p>
-      </div>
-
-      <!-- Contact Info -->
-      <div class="col-md-6 col-lg-4 wow fadeIn" data-wow-delay="0.3s">
-        <h5 class="text-white mb-4">Get In Touch</h5>
-        <p><i class="fa fa-map-marker-alt me-3"></i>12 Cerecon - 4th Floor - Office No. 403, Olaya St, Riyadh 12241, Saudi Arabia.</p>
-        <p><i class="fa fa-phone-alt me-3"></i>+966 920015409</p>
-        <p><i class="fa fa-envelope me-3"></i>info@techsupbusiness.com</p>
-        <div class="d-flex pt-2">
-          <a class="btn btn-outline-primary btn-square border-2 me-2" href="#"><i class="fab fa-twitter"></i></a>
-          <a class="btn btn-outline-primary btn-square border-2 me-2" href="#"><i class="fab fa-facebook-f"></i></a>
-          <a class="btn btn-outline-primary btn-square border-2 me-2" href="#"><i class="fab fa-instagram"></i></a>
-          <a class="btn btn-outline-primary btn-square border-2 me-2" href="#"><i class="fab fa-youtube"></i></a>
-          <a class="btn btn-outline-primary btn-square border-2 me-2" href="#"><i class="fab fa-linkedin-in"></i></a>
-        </div>
-      </div>
-
-      <!-- Important Links -->
-      <div class="col-md-6 col-lg-3 wow fadeIn" data-wow-delay="0.5s">
-        <h5 class="text-white mb-4">Quick Links</h5>
-        <a class="btn btn-link" href="#">About Us</a>
-        <a class="btn btn-link" href="#">Features</a>
-        <a class="btn btn-link" href="#">Pricing</a>
-        <a class="btn btn-link" href="#">Support</a>
-        <a class="btn btn-link" href="#">Terms & Conditions</a>
-      </div>
-
-    </div>
-  </div>
-
-  <!-- Footer Bottom -->
-  <div class="container wow fadeIn" data-wow-delay="0.1s">
-    <div class="copyright">
-      <div class="row justify-content-center">
-        <div class="col-md-6 text-center mb-3 mb-md-0">
-          &copy; <a class="border-bottom" href="#">Techsup Tracking</a>, All Rights Reserved.
-        </div>
-        <!-- <div class="col-md-6 text-center text-md-end">
-          <div class="footer-menu">
-            <a href="#">Home</a>
-            <a href="#">Cookies</a>
-            <a href="#">Help</a>
-            <a href="#">FAQs</a>
+    <!-- Footer Bottom -->
+    <div class="container wow fadeIn" data-wow-delay="0.1s">
+      <div class="copyright">
+        <div class="row justify-content-center">
+          <div class="col-md-6 text-center mb-3 mb-md-0">
+            &copy; <a class="border-bottom" href="#">Techsup Tamam</a>, All Rights Reserved.
           </div>
-        </div> -->
+        </div>
       </div>
     </div>
   </div>
-</div>
 
     <!-- Footer End -->
 
