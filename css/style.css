@@ -82,6 +82,10 @@ html {
     font-weight: normal;
 }
 
+.mainPage {
+  background-image: url(../img/new-hero-bg.png);
+  background-repeat: no-repeat;
+}
 
 /*** Navbar ***/
 .sticky-top {
@@ -150,9 +154,9 @@ html {
 }
 
 /* ===== Navbar effect ===== */
-.navbar {
+/* .navbar {
   backdrop-filter: blur(10px);
-}
+} */
 
 .navbar .nav-link {
   position: relative;
@@ -234,7 +238,10 @@ html {
 /*** Hero Header ***/
 
 .landing-hero--plain {
-    background: transparent;
+    
+  /* background: transparent; */
+  background-size: cover;
+  background-repeat: no-repeat;
 }
 
 .landing-hero__grid {
@@ -247,8 +254,8 @@ html {
     gap: 10px;
     padding: 10px 14px;
     border-radius: 999px;
-    background: rgba(13, 110, 253, 0.08);
-    color: var(--bs-primary);
+    background: rgba(230, 245, 227, 0.08);
+    color: var(--bs-white);
     font-weight: 700;
     margin-bottom: 18px;
 }
@@ -257,8 +264,8 @@ html {
     width: 10px;
     height: 10px;
     border-radius: 50%;
-    background: var(--bs-primary);
-    box-shadow: 0 0 0 6px rgba(13, 110, 253, 0.15);
+    background: var(--bs-white);
+    box-shadow: 0 0 0 6px var(--bs-primary);
 }
 
 .landing-hero__title {
@@ -1392,7 +1399,9 @@ html {
   font-size: 12px;
 }
 
-
+.contact-hero {
+  min-height: 30vh;
+}
 
 .contact-hero h1 {
   font-size: 42px;
@@ -1401,6 +1410,7 @@ html {
 
 .auth {
   background: linear-gradient(135deg, transparent, rgba(19,88,41,0.1));
+  background-image: url(../img/new-hero-bg.png);
       min-height: 100vh;
       display: flex;
       align-items: center;
