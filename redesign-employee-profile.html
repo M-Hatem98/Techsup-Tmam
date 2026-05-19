@@ -1,0 +1,135 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="utf-8" />
+  <title>Redesign the Employee Profile</title>
+  <meta content="width=device-width, initial-scale=1.0" name="viewport" />
+  <meta content="employee profile redesign" name="keywords" />
+  <meta content="Tamam employee profile redesign guide" name="description" />
+
+  <link href="img/favicon.ico" rel="icon" />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Open+Sans&family=Space+Grotesk&display=swap" rel="stylesheet" />
+  <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.10.0/css/all.min.css" rel="stylesheet" />
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.4.1/font/bootstrap-icons.css" rel="stylesheet" />
+  <link href="lib/animate/animate.min.css" rel="stylesheet" />
+  <link href="css/bootstrap.min.css" rel="stylesheet" />
+  <link href="css/style.css" rel="stylesheet" />
+</head>
+
+<body>
+  <div class="mainPage min-vh-100 guide-page">
+    <div class="container-fluid sticky-top">
+      <div class="container-fluid">
+        <nav class="navbar navbar-expand-lg navbar-transparent border-bottom border-2 border-white py-0">
+          <a href="index.html" class="navbar-brand">
+            <img id="Logo" src="img/logo.png" alt="Tamam Logo" width="80px" height="auto" />
+          </a>
+          <button type="button" class="navbar-toggler ms-auto me-0" data-bs-toggle="collapse"
+            data-bs-target="#navbarCollapse">
+            <span class="navbar-toggler-icon"></span>
+          </button>
+          <div class="collapse navbar-collapse" id="navbarCollapse">
+            <div class="navbar-nav ms-auto">
+              <a href="index.html" class="nav-item nav-link">Home</a>
+              <a href="user-guide.html" class="nav-item nav-link active">User Guide</a>
+              <a href="contact.html" class="nav-item nav-link">Contact</a>
+            </div>
+          </div>
+        </nav>
+      </div>
+    </div>
+
+    <section class="py-5">
+      <div class="container-fluid">
+        <div class="row g-4">
+          <aside class="col-lg-3">
+            <div class="guide-sidebar">
+              <div class="guide-widget guide-widget--publisher">
+                <div class="guide-widget__label">Publisher</div>
+                <div class="guide-publisher">
+                  <img src="img/logo-dark.png" alt="Publisher avatar" class="guide-publisher__avatar p-2" />
+                  <div>
+                    <h3>TAMAM Admin</h3>
+                    <span>Published May 13, 2026</span>
+                  </div>
+                </div>
+              </div>
+
+              <div class="guide-widget">
+                <div class="guide-widget__title">Suggested Articles</div>
+                <ul class="guide-suggestions">
+                  <li><a href="user-guide.html">User guide overview</a></li>
+                  <li><a href="employee-manual.html">Employee login and onboarding</a></li>
+                  <li><a href="faq.html">Account and support FAQs</a></li>
+                  <li><a href="admin-manual.html">Attendance policy configuration</a></li>
+                  <li><a href="employee-manual.html">Mobile self-service actions</a></li>
+                </ul>
+              </div>
+
+              <div class="guide-widget">
+                <div class="guide-widget__title">Need help?</div>
+                <p>Reach out for support if you need a guided walkthrough or custom onboarding plan.</p>
+                <a href="contact.html" class="btn btn-outline-primary w-100">Contact Support</a>
+              </div>
+            </div>
+          </aside>
+
+          <main class="col-lg-9">
+            <div class="page-header mb-4">
+              <span class="eyebrow">Admin User Manual</span>
+              <h1>Redesign the Employee Profile</h1>
+              <p>Learn how to customize and redesign employee profile layouts.</p>
+            </div>
+
+            <div class="article-content">
+  <p>The employee profile has been completely redesigned to provide a comprehensive overview of daily, weekly, and monthly performance. This update ensures that administrators can monitor attendance precision and request statuses in one centralized view.</p>
+  
+  <div class="d-flex justify-content-center align-items-center">
+    <img src="img/Employee Profile.png" alt="Employee Profile Interface" class="article-screenshot" />
+  </div>
+
+  <h2>1. Shift Details and Real-time Tracking</h2>
+  <p>The profile now features a clear display of scheduled shift hours alongside the employee's actual check-in and check-out times. This allows for immediate comparison between planned schedules and actual attendance.</p>
+
+  <h2>2. Employee Monthly Summary</h2>
+  <p>This section provides a high-level overview of the employee's performance throughout the month. It includes key metrics such as total attendance days, absences, total working hours, instances of lateness, and a countdown of remaining remote work hours.</p>
+
+  <h2>3. Employee Weekly Summary</h2>
+  <p>The weekly view focuses on short-term activity, detailing submitted requests and leaves, the current status of attendance proof requests, and a complete log of all attendance attempts made during the week.</p>
+
+  <h2>4. Attendance Attempt Log & Geofencing</h2>
+  <p>The log provides critical data on check-in and check-out attempts. To simplify location verification, attempts are color-coded: <strong><span style="color: #d31111;">Red</span></strong> indicates an attempt made outside the assigned location, while <strong><span style="color: #28a745;">Green</span></strong> confirms the location is correct.</p>
+
+  <h2>Steps to Access</h2>
+  <p>Follow these steps to view the new profile layout:</p>
+  <ul>
+    <li>From the top menu, navigate to <strong>Attendance</strong>.</li>
+    <li>From the side menu, select <strong>Employees</strong>.</li>
+    <li>Select a specific employee from the list and click <strong>View</strong>.</li>
+  </ul>
+
+  <p><strong>Pro Tip:</strong> Use the color-coded log to quickly audit remote work compliance and identify recurring location errors without manual coordinate checks.</p>
+</div>
+
+            <div class="mt-4 text-end">
+              <a href="admin-manual.html" class="btn btn-outline-primary">Back to Admin Manual</a>
+            </div>
+          </main>
+        </div>
+      </div>
+    </section>
+
+    <footer class="container py-3">
+      <div class="text-center text-white">&copy; Techsup Tamam. All Rights Reserved.</div>
+    </footer>
+  </div>
+
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.1/jquery.min.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0/dist/js/bootstrap.bundle.min.js"></script>
+  <script src="js/main.js"></script>
+</body>
+
+</html>

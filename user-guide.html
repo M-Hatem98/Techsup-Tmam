@@ -1,0 +1,165 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="utf-8" />
+  <title>Tamam User Guide</title>
+  <meta content="width=device-width, initial-scale=1.0" name="viewport" />
+  <meta content="user guide" name="keywords" />
+  <meta content="Tamam user guide page" name="description" />
+
+  <link href="img/favicon.ico" rel="icon" />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Open+Sans&family=Space+Grotesk&display=swap" rel="stylesheet" />
+  <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.10.0/css/all.min.css" rel="stylesheet" />
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.4.1/font/bootstrap-icons.css" rel="stylesheet" />
+  <link href="lib/animate/animate.min.css" rel="stylesheet" />
+  <link href="css/bootstrap.min.css" rel="stylesheet" />
+  <link href="css/style.css" rel="stylesheet" />
+</head>
+
+<body>
+  <div class="mainPage min-vh-100 guide-page">
+    <div class="container-fluid sticky-top">
+      <div class="container-fluid">
+        <nav class="navbar navbar-expand-lg navbar-transparent border-bottom border-2 border-white py-0">
+          <a href="index.html" class="navbar-brand">
+            <img id="Logo" src="img/logo.png" alt="Tamam Logo" width="80px" height="auto" />
+          </a>
+          <button type="button" class="navbar-toggler ms-auto me-0" data-bs-toggle="collapse"
+            data-bs-target="#navbarCollapse">
+            <span class="navbar-toggler-icon"></span>
+          </button>
+          <div class="collapse navbar-collapse" id="navbarCollapse">
+            <div class="navbar-nav ms-auto">
+              <a href="index.html" class="nav-item nav-link">Home</a>
+              <a href="user-guide.html" class="nav-item nav-link active">User Guide</a>
+              <a href="contact.html" class="nav-item nav-link">Contact</a>
+              <a href="#" class="btn btn-primary ms-3 get-started-btn" data-bs-toggle="modal"
+                data-bs-target="#getStartedModal">Get Started</a>
+            </div>
+          </div>
+        </nav>
+      </div>
+    </div>
+
+    <!-- Modal -->
+    <div class="modal fade" id="getStartedModal" tabindex="-1">
+      <div class="modal-dialog modal-dialog-centered">
+        <div class="modal-content get-started-modal">
+          <div class="modal-header border-0">
+            <h5 class="modal-title fw-bold">Start with Tamam</h5>
+            <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+          </div>
+          <div class="modal-body">
+            <form id="getStartedForm">
+              <div class="row g-3">
+                <div class="col-md-6">
+                  <input type="text" class="form-control" id="firstName" placeholder="First Name">
+                </div>
+                <div class="col-md-6">
+                  <input type="text" class="form-control" id="lastName" placeholder="Last Name">
+                </div>
+                <div class="col-12">
+                  <input type="email" class="form-control" id="email" placeholder="Email Address">
+                  <small class="error-text"></small>
+                </div>
+                <div class="col-12">
+                  <input type="text" class="form-control" id="phone" placeholder="Phone Number">
+                </div>
+                <div class="col-12">
+                  <input type="text" class="form-control" id="company" placeholder="Company Name">
+                </div>
+                <div class="col-12">
+                  <button class="btn btn-primary w-100 submit-btn">Get Started</button>
+                </div>
+              </div>
+            </form>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <section class="py-5">
+      <div class="container-fluid">
+        <div class="row g-4">
+            <div class="col-12 d-flex justify-content-center align-items-center">
+                 <div class="page-header text-center">
+              <span class="eyebrow">User Guide</span>
+              <h1>Find the right Tamam manual for your role</h1>
+              <p>Choose a guide below to view the full list of article titles for admins, employees, or frequently asked questions.</p>
+            </div>
+            </div>
+          <aside class="col-lg-3">
+            <div class="guide-sidebar">
+              <div class="guide-widget guide-widget--publisher">
+                <div class="guide-widget__label">Publisher</div>
+                <div class="guide-publisher">
+                  <img src="img/logo-dark.png" alt="Publisher avatar" class="guide-publisher__avatar p-2" />
+                  <div>
+                    <h3>TAMAM Admin</h3>
+                    <span>Published May 12, 2026</span>
+                  </div>
+                </div>
+              </div>
+
+              <div class="guide-widget">
+                <div class="guide-widget__title">Suggested Articles</div>
+                <ul class="guide-suggestions">
+                  <li><a href="admin-manual.html">Admin setup checklist</a></li>
+                  <li><a href="employee-manual.html">Employee login and onboarding</a></li>
+                  <li><a href="faq.html">Account and support FAQs</a></li>
+                  <li><a href="admin-manual.html">Attendance policy configuration</a></li>
+                  <li><a href="employee-manual.html">Mobile self-service actions</a></li>
+                </ul>
+              </div>
+
+              <div class="guide-widget">
+                <div class="guide-widget__title">Need help?</div>
+                <p>Reach out for support if you need a guided walkthrough or custom onboarding plan.</p>
+                <a href="contact.html" class="btn btn-outline-primary w-100">Contact Support</a>
+              </div>
+            </div>
+          </aside>
+
+          <main class="col-lg-9">
+            <div class="row g-4">
+              <div class="col-md-4">
+                <article class="guide-topic-card">
+                  <h2 class="guide-topic-card__title">Admin User Manual</h2>
+                  <p class="guide-topic-card__description">Everything administrators need to configure Tamam, manage users, and review attendance data.</p>
+                  <a href="admin-manual.html" class="btn btn-primary ms-3 get-started-btn">View Admin Manual</a>
+                </article>
+              </div>
+              <div class="col-md-4">
+                <article class="guide-topic-card">
+                  <h2 class="guide-topic-card__title">Employee User Manual</h2>
+                  <p class="guide-topic-card__description">Step-by-step guidance for employees on login, attendance, leave requests, and self-service workflows.</p>
+                  <a href="employee-manual.html" class="btn btn-primary ms-3 get-started-btn">View Employee Manual</a>
+                </article>
+              </div>
+              <div class="col-md-4">
+                <article class="guide-topic-card">
+                  <h2 class="guide-topic-card__title">FAQs</h2>
+                  <p class="guide-topic-card__description">Quick answers to common questions about account setup, security, and mobile attendance.</p>
+                  <a href="faq.html" class="btn btn-primary ms-3 get-started-btn">View FAQs</a>
+                </article>
+              </div>
+            </div>
+          </main>
+        </div>
+      </div>
+    </section>
+
+    <footer class="container pt-5">
+      <div class="text-center text-white">&copy; Techsup Tamam. All Rights Reserved.</div>
+    </footer>
+  </div>
+
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.1/jquery.min.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0/dist/js/bootstrap.bundle.min.js"></script>
+  <script src="js/main.js"></script>
+</body>
+
+</html>
