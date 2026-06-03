@@ -1,0 +1,145 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="utf-8" />
+  <title>Can the app recognize employee location?</title>
+  <meta content="width=device-width, initial-scale=1.0" name="viewport" />
+  <meta content="location recognition" name="keywords" />
+  <meta content="Can the application recognize the employee's location when registering attendance" name="description" />
+
+  <link href="img/favicon.ico" rel="icon" />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Open+Sans&family=Space+Grotesk&display=swap" rel="stylesheet" />
+  <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.10.0/css/all.min.css" rel="stylesheet" />
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.4.1/font/bootstrap-icons.css" rel="stylesheet" />
+  <link href="lib/animate/animate.min.css" rel="stylesheet" />
+  <link href="css/bootstrap.min.css" rel="stylesheet" />
+  <link href="css/style.css" rel="stylesheet" />
+</head>
+
+<body>
+  <div class="mainPage min-vh-100 guide-page">
+    <div class="container-fluid sticky-top">
+      <div class="container-fluid">
+        <nav class="navbar navbar-expand-lg navbar-transparent border-bottom border-2 border-white py-0">
+          <a href="index.html" class="navbar-brand">
+            <img id="Logo" src="img/logo.png" alt="Tamam Logo" width="80px" height="auto" />
+          </a>
+          <button type="button" class="navbar-toggler ms-auto me-0" data-bs-toggle="collapse"
+            data-bs-target="#navbarCollapse">
+            <span class="navbar-toggler-icon"></span>
+          </button>
+          <div class="collapse navbar-collapse" id="navbarCollapse">
+            <div class="navbar-nav ms-auto">
+              <a href="index.html" class="nav-item nav-link">Home</a>
+              <a href="user-guide.html" class="nav-item nav-link active">User Guide</a>
+              <a href="contact.html" class="nav-item nav-link">Contact</a>
+            </div>
+          </div>
+        </nav>
+      </div>
+    </div>
+    <div class="hero my-5">
+      <div class="container">
+        <div class="page-header mb-4 d-flex justify-content-center align-items-center flex-column">
+          <span class="eyebrow">FAQ</span>
+          <h1>Can the application recognize employee location when registering attendance?</h1>
+        </div>
+      </div>
+    </div>
+    <section class="py-5">
+      <div class="container-fluid">
+        <div class="row g-4">
+          <aside class="col-lg-3">
+            <div class="guide-sidebar">
+              <div class="guide-widget guide-widget--publisher">
+                <div class="guide-widget__label">Publisher</div>
+                <div class="guide-publisher">
+                  <img src="img/logo-dark.png" alt="Publisher avatar" class="guide-publisher__avatar p-2" />
+                  <div>
+                    <h3>TAMAM Support</h3>
+                    <span>Published May 25, 2026</span>
+                  </div>
+                </div>
+              </div>
+
+              <div class="guide-widget">
+                <div class="guide-widget__title">Suggested Articles</div>
+                <ul class="guide-suggestions">
+                  <li><a href="user-guide.html">User guide overview</a></li>
+                  <li><a href="admin-manual.html">Admin setup checklist</a></li>
+                  <li><a href="employee-manual.html">Employee user manual</a></li>
+                  <li><a href="faq.html">FAQ and support</a></li>
+                  <li><a href="contact.html">Contact support</a></li>
+                </ul>
+              </div>
+
+              <div class="guide-widget">
+                <div class="guide-widget__title">Need help?</div>
+                <p>Reach out for support if you need a guided walkthrough or custom onboarding plan.</p>
+                <a href="contact.html" class="btn btn-outline-primary w-100">Contact Support</a>
+              </div>
+            </div>
+          </aside>
+
+          <main class="col-lg-9">
+
+            <div class="article-content">
+              <p>Yes, Tamam uses GPS technology to verify that employees are at authorized work locations when they check in.</p>
+
+              <h2>How Location Recognition Works</h2>
+              <p>When an employee checks in:</p>
+              <ul>
+                <li>The Tamam app captures the device's GPS location</li>
+                <li>The location is compared against authorized work locations</li>
+                <li>If the employee is within the defined radius, check-in is allowed</li>
+                <li>If outside the radius, check-in may be rejected or flagged</li>
+              </ul>
+
+              <h2>Location Requirements</h2>
+              <ul>
+                <li>GPS must be enabled on the employee's mobile device</li>
+                <li>The device must have a clear signal and internet connection for verification</li>
+                <li>Location accuracy is typically within 5-15 meters using modern GPS</li>
+              </ul>
+
+              <h2>Authorized Work Locations</h2>
+              <p>Administrators configure work locations with:</p>
+              <ul>
+                <li>Geographic coordinates (latitude and longitude)</li>
+                <li>A radius boundary (typically 100-500 meters)</li>
+                <li>Location name and description</li>
+              </ul>
+
+              <h2>Multiple Locations</h2>
+              <p>If an employee works at multiple locations:</p>
+              <ul>
+                <li>Each location is added as a separate authorized zone</li>
+                <li>Employees can check in at any authorized location</li>
+                <li>The system records which location each check-in occurred at</li>
+              </ul>
+
+              <p><strong>Tip:</strong> Keep GPS enabled during work hours for accurate location-based check-ins.</p>
+            </div>
+
+            <div class="mt-4 text-end">
+              <a href="faq.html" class="btn btn-primary ms-3 get-started-btn">Back to FAQ</a>
+            </div>
+          </main>
+        </div>
+      </div>
+    </section>
+
+    <footer class="container py-3">
+      <div class="text-center text-white">&copy; Techsup Tamam. All Rights Reserved.</div>
+    </footer>
+  </div>
+
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.1/jquery.min.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0/dist/js/bootstrap.bundle.min.js"></script>
+  <script src="js/main.js"></script>
+</body>
+
+</html>

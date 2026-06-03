@@ -1035,8 +1035,6 @@ html {
     max-width: 800px;
     height: auto;
     margin: 2rem 0;
-    border: 1px solid #e9ecef;
-    border-radius: 8px;
 }
 
 
@@ -1706,3 +1704,42 @@ html {
     .auth-link {
       font-size: 14px;
     }
+
+.step-badge {
+    background: var(--bs-light-primary);
+    color: var(--bs-primary);
+    width: 45px;
+    height: 45px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: 12px;
+    font-weight: 700;
+    font-size: 1.1rem;
+    margin-bottom: 15px;
+    border: 1px solid var(--bs-light-primary);
+}
+
+.section-desc {
+    font-size: 1.1rem;
+    color: #333;
+    opacity: 0.85;
+    line-height: 1.7;
+}
+
+.article-screenshot {
+    border-radius: 16px;
+    max-height: 380px;
+    object-fit: contain;
+    width: 100%;
+}
+
+@media (max-width: 991px) {
+    .article-row {
+        text-align: center;
+        margin-bottom: 4rem !important;
+    }
+    .step-badge {
+        margin: 0 auto 15px auto;
+    }
+}
