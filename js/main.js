@@ -72,6 +72,42 @@ modalForm.addEventListener("submit", function (e) {
     return false;
   });
 
+  function enableLightbox(images, groupPrefix) {
+    images.forEach((img, index) => {
+      if (!img || !img.getAttribute("src") || img.closest("a[data-lightbox]")) {
+        return;
+      }
+
+      const link = document.createElement("a");
+      link.href = img.getAttribute("src");
+      link.setAttribute("data-lightbox", `${groupPrefix}-${index + 1}`);
+      link.setAttribute("data-title", img.getAttribute("alt") || "Tamam screenshot");
+      link.className = "d-block lightbox-trigger";
+
+      img.parentNode.insertBefore(link, img);
+      link.appendChild(img);
+    });
+  }
+
+  enableLightbox(
+    document.querySelectorAll(".service-detail__image"),
+    "attendance-service"
+  );
+
+  enableLightbox(
+    document.querySelectorAll("#payroll-services .why-choose-pillar img"),
+    "payroll-service"
+  );
+
+  if (window.lightbox) {
+    lightbox.option({
+      resizeDuration: 200,
+      fadeDuration: 200,
+      alwaysShowNavOnTouchDevices: true,
+      wrapAround: true
+    });
+  }
+
   // Reveals
 
   const reveals = document.querySelectorAll(
