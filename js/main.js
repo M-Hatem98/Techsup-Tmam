@@ -11,8 +11,10 @@
   };
   spinner();
 
-  // Initiate the wowjs
-  new WOW().init();
+  // Initiate the wowjs only when the WOW library is available
+  if (typeof WOW !== "undefined") {
+    new WOW().init();
+  }
 
   // Sticky Navbar
   $(window).scroll(function () {
@@ -25,38 +27,42 @@
     }
   });
 
-//   Login Modal 
+// Login Modal
 
 const modalForm = document.getElementById("getStartedForm");
 const modalEmailInput = document.getElementById("email");
-const modalErrorText = modalEmailInput.nextElementSibling;
+const modalErrorText = modalEmailInput ? modalEmailInput.nextElementSibling : null;
 
-modalForm.addEventListener("submit", function (e) {
-  e.preventDefault();
+if (modalForm && modalEmailInput && modalErrorText) {
+  modalForm.addEventListener("submit", function (e) {
+    e.preventDefault();
 
-  let valid = true;
+    let valid = true;
 
-  const email = modalEmailInput.value.trim();
-  const regex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
+    const email = modalEmailInput.value.trim();
+    const regex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
 
-  if (!regex.test(email)) {
-    modalErrorText.textContent = "Enter a valid email";
-    modalEmailInput.classList.add("is-invalid");
-    valid = false;
-  } else {
-    modalErrorText.textContent = "";
-    modalEmailInput.classList.remove("is-invalid");
-  }
+    if (!regex.test(email)) {
+      modalErrorText.textContent = "Enter a valid email";
+      modalEmailInput.classList.add("is-invalid");
+      valid = false;
+    } else {
+      modalErrorText.textContent = "";
+      modalEmailInput.classList.remove("is-invalid");
+    }
 
-  if (valid) {
-    alert("Welcome! We will contact you soon.");
-    modalForm.reset();
+    if (valid) {
+      alert("Your demo request has been received. Our team will contact you shortly.");
+      modalForm.reset();
 
-    // close modal
-    const modal = bootstrap.Modal.getInstance(document.getElementById("getStartedModal"));
-    modal.hide();
-  }
-});
+      // close modal
+      const modal = bootstrap.Modal.getInstance(document.getElementById("getStartedModal"));
+      if (modal) {
+        modal.hide();
+      }
+    }
+  });
+}
 
 
   // Back to top button
@@ -163,151 +169,155 @@ modalForm.addEventListener("submit", function (e) {
 
   counters.forEach((counter) => observer.observe(counter));
 
-//   Newsletter
+// Newsletter
 
   const form = document.querySelector(".newsletter-form");
-const input = document.querySelector(".newsletter-input");
-const errorText = document.querySelector(".newsletter-error");
-const suggestionsBox = document.querySelector(".email-suggestions");
+  const input = document.querySelector(".newsletter-input");
+  const errorText = document.querySelector(".newsletter-error");
+  const suggestionsBox = document.querySelector(".email-suggestions");
 
-/* ===== Email Regex ===== */
-const emailRegex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
+  if (form && input && errorText && suggestionsBox) {
+    /* ===== Email Regex ===== */
+    const emailRegex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
 
-/* ===== Common Domains ===== */
-const domains = [
-  "gmail.com",
-  "yahoo.com",
-  "outlook.com",
-  "hotmail.com"
-];
+    /* ===== Common Domains ===== */
+    const domains = [
+      "gmail.com",
+      "yahoo.com",
+      "outlook.com",
+      "hotmail.com"
+    ];
 
-/* ===== Validate Email ===== */
-function validateEmail() {
-  const value = input.value.trim();
+    /* ===== Validate Email ===== */
+    function validateEmail() {
+      const value = input.value.trim();
 
-  if (value === "") {
-    showError("Email is required");
-    return false;
-  }
+      if (value === "") {
+        showError("Email is required");
+        return false;
+      }
 
-  if (!emailRegex.test(value)) {
-    showError("Please enter a valid email");
-    return false;
-  }
+      if (!emailRegex.test(value)) {
+        showError("Please enter a valid email");
+        return false;
+      }
 
-  showSuccess();
-  return true;
-}
+      showSuccess();
+      return true;
+    }
 
-function showError(message) {
-  input.classList.add("error");
-  input.classList.remove("success");
-  errorText.innerText = message;
-}
+    function showError(message) {
+      input.classList.add("error");
+      input.classList.remove("success");
+      errorText.innerText = message;
+    }
 
-function showSuccess() {
-  input.classList.remove("error");
-  input.classList.add("success");
-  errorText.innerText = "";
-}
+    function showSuccess() {
+      input.classList.remove("error");
+      input.classList.add("success");
+      errorText.innerText = "";
+    }
 
-/* ===== Suggestions Logic ===== */
-input.addEventListener("input", () => {
-  const value = input.value;
-  suggestionsBox.innerHTML = "";
+    /* ===== Suggestions Logic ===== */
+    input.addEventListener("input", () => {
+      const value = input.value;
+      suggestionsBox.innerHTML = "";
 
-  if (!value.includes("@")) {
-    suggestionsBox.style.display = "none";
-    return;
-  }
+      if (!value.includes("@")) {
+        suggestionsBox.style.display = "none";
+        return;
+      }
 
-  const [name, domainPart] = value.split("@");
+      const [name, domainPart] = value.split("@");
 
-  if (!name) return;
+      if (!name) return;
 
-  const filtered = domains.filter(d => 
-    d.startsWith(domainPart || "")
-  );
+      const filtered = domains.filter(d => d.startsWith(domainPart || ""));
 
-  if (filtered.length === 0) {
-    suggestionsBox.style.display = "none";
-    return;
-  }
+      if (filtered.length === 0) {
+        suggestionsBox.style.display = "none";
+        return;
+      }
 
-  filtered.forEach(domain => {
-    const suggestion = document.createElement("div");
-    suggestion.innerText = `${name}@${domain}`;
+      filtered.forEach(domain => {
+        const suggestion = document.createElement("div");
+        suggestion.innerText = `${name}@${domain}`;
 
-    suggestion.addEventListener("click", () => {
-      input.value = suggestion.innerText;
-      suggestionsBox.style.display = "none";
-      validateEmail();
+        suggestion.addEventListener("click", () => {
+          input.value = suggestion.innerText;
+          suggestionsBox.style.display = "none";
+          validateEmail();
+        });
+
+        suggestionsBox.appendChild(suggestion);
+      });
+
+      suggestionsBox.style.display = "block";
     });
 
-    suggestionsBox.appendChild(suggestion);
-  });
+    /* Hide suggestions on click outside */
+    document.addEventListener("click", (e) => {
+      if (!e.target.closest(".newsletter-field")) {
+        suggestionsBox.style.display = "none";
+      }
+    });
 
-  suggestionsBox.style.display = "block";
-});
+    /* ===== Form Submit ===== */
+    form.addEventListener("submit", (e) => {
+      e.preventDefault();
 
-/* Hide suggestions on click outside */
-document.addEventListener("click", (e) => {
-  if (!e.target.closest(".newsletter-field")) {
-    suggestionsBox.style.display = "none";
+      if (validateEmail()) {
+        const btn = form.querySelector(".newsletter-btn");
+
+        btn.innerText = "Subscribed ✓";
+        btn.style.background = "#22c55e";
+
+        setTimeout(() => {
+          btn.innerText = "Subscribe";
+          btn.style.background = "#135829";
+          form.reset();
+          input.classList.remove("success");
+        }, 2000);
+      }
+    });
+
+    input.addEventListener("blur", validateEmail);
   }
-});
 
-/* ===== Form Submit ===== */
-form.addEventListener("submit", (e) => {
-  e.preventDefault();
+  // Contact
+  const contactForm = document.getElementById("contactForm");
+  const emailInput = document.getElementById("email");
 
-  if (validateEmail()) {
-    const btn = form.querySelector(".newsletter-btn");
-
-    btn.innerText = "Subscribed ✓";
-    btn.style.background = "#22c55e";
-
-    setTimeout(() => {
-      btn.innerText = "Subscribe";
-      btn.style.background = "#135829";
-      form.reset();
-      input.classList.remove("success");
-    }, 2000);
-  }
-});
-
-input.addEventListener("blur", validateEmail);
-
-// Contact
-const contactForm = document.getElementById("contactForm");
-const emailInput = document.getElementById("email");
-const contacterrorText = emailInput.nextElementSibling;
-if (contactForm) {
+  if (contactForm && emailInput) {
+    const contacterrorText = emailInput.nextElementSibling;
 
     contactForm.addEventListener("submit", function (e) {
-        e.preventDefault();
+      e.preventDefault();
 
-        let isValid = true;
-        
-  // Email validation
-  const emailValue = emailInput.value.trim();
-  const emailRegex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
+      let isValid = true;
 
-  if (!emailRegex.test(emailValue)) {
-      contacterrorText.textContent = "Please enter a valid email address";
-      emailInput.classList.add("is-invalid");
-    isValid = false;
-} else {
-    contacterrorText.textContent = "";
-    emailInput.classList.remove("is-invalid");
+      const emailValue = emailInput.value.trim();
+      const emailRegex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
+
+      if (!emailRegex.test(emailValue)) {
+        if (contacterrorText) {
+          contacterrorText.textContent = "Please enter a valid email address";
+        }
+        emailInput.classList.add("is-invalid");
+        isValid = false;
+      } else {
+        if (contacterrorText) {
+          contacterrorText.textContent = "";
+        }
+        emailInput.classList.remove("is-invalid");
+      }
+
+      if (isValid) {
+        alert("Message sent successfully 🚀");
+        contactForm.reset();
+      }
+    });
   }
-  
-  if (isValid) {
-    alert("Message sent successfully 🚀");
-    contactForm.reset();
-  }
-});
-}
 
 
 })(jQuery);
