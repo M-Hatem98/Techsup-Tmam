@@ -52,7 +52,7 @@ if (modalForm && modalEmailInput && modalErrorText) {
     }
 
     if (valid) {
-      alert("Welcome! We will contact you soon.");
+      alert("Your demo request has been received. Our team will contact you shortly.");
       modalForm.reset();
 
       // close modal

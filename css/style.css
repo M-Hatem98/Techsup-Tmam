@@ -202,6 +202,13 @@ html {
   animation: fadeInUp 0.4s ease;
 }
 
+.modal-subtitle {
+  color: #667085;
+  font-size: 0.92rem;
+  margin: 0.35rem 0 0;
+  line-height: 1.6;
+}
+
 .get-started-modal .form-control {
   border-radius: 10px;
   padding: 12px;
