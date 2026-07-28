@@ -128,7 +128,7 @@ if (modalForm && modalEmailInput && modalErrorText) {
         title: "Attendance Plus",
         description: "For growing teams that need stronger attendance control",
         badge: "Most Popular",
-        prices: { monthly: "29", quarterly: "83", semi: "157", yearly: "290" },
+        prices: { monthly: "17", quarterly: "52", semi: "100", yearly: "180" },
         features: [
           "Up to 100 employees",
           "Attendance analytics and policy controls",
@@ -167,7 +167,7 @@ if (modalForm && modalEmailInput && modalErrorText) {
         title: "Payroll Professional",
         description: "For finance teams with recurring payroll operations",
         badge: "Most Popular",
-        prices: { monthly: "45", quarterly: "128", semi: "243", yearly: "450" },
+        prices: { monthly: "23", quarterly: "70", semi: "132", yearly: "240" },
         features: [
           "Up to 150 employees",
           "Loans and contract salary components",
@@ -206,7 +206,7 @@ if (modalForm && modalEmailInput && modalErrorText) {
         title: "Attendance & Payroll Growth",
         description: "For growing companies that want people and pay in one place",
         badge: "Best Value",
-        prices: { monthly: "59", quarterly: "168", semi: "319", yearly: "590" },
+        prices: { monthly: "37", quarterly: "109", semi: "205", yearly: "370" },
         features: [
           "Up to 150 employees",
           "Attendance analytics and policy controls",
@@ -231,10 +231,10 @@ if (modalForm && modalEmailInput && modalErrorText) {
   };
 
   const periodLabels = {
-    monthly: "/month",
-    quarterly: "/quarter",
-    semi: "/semi",
-    yearly: "/year"
+    monthly: "/user",
+    quarterly: "/user",
+    semi: "/user",
+    yearly: "/user"
   };
 
   const setActiveTab = (tabs, activeTab) => {
