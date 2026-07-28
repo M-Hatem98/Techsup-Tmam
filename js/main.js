@@ -105,6 +105,195 @@ if (modalForm && modalEmailInput && modalErrorText) {
     "payroll-service"
   );
 
+  // Pricing tabs
+  const pricingCards = document.querySelectorAll("[data-plan-index]");
+  const productTabs = document.querySelectorAll("[data-pricing-product]");
+  const periodTabs = document.querySelectorAll("[data-pricing-period]");
+
+  const pricingPlans = {
+    attendance: [
+      {
+        title: "Attendance Essentials",
+        description: "For small teams that need simple attendance control",
+        prices: { monthly: "19", quarterly: "54", semi: "102", yearly: "190" },
+        features: [
+          "Up to 50 employees",
+          "Daily attendance tracking",
+          "Leave and approval workflow",
+          "Basic reports and exports"
+        ],
+        action: "Get Started"
+      },
+      {
+        title: "Attendance Plus",
+        description: "For growing teams that need stronger attendance control",
+        badge: "Most Popular",
+        prices: { monthly: "29", quarterly: "83", semi: "157", yearly: "290" },
+        features: [
+          "Up to 100 employees",
+          "Attendance analytics and policy controls",
+          "Shift scheduling and location rules",
+          "Priority support and onboarding"
+        ],
+        action: "Choose Plan"
+      },
+      {
+        title: "Attendance Enterprise",
+        description: "Tailored for multi-branch attendance operations",
+        prices: { monthly: "Custom", quarterly: "Custom", semi: "Custom", yearly: "Custom" },
+        features: [
+          "Unlimited employees",
+          "Advanced attendance automation",
+          "Dedicated implementation and account support",
+          "Custom integrations and reporting"
+        ],
+        action: "Contact Sales"
+      }
+    ],
+    payroll: [
+      {
+        title: "Payroll Starter",
+        description: "For teams moving salary records into one workspace",
+        prices: { monthly: "25", quarterly: "71", semi: "135", yearly: "250" },
+        features: [
+          "Up to 50 employees",
+          "Payroll records and salary components",
+          "Payslip generation",
+          "Payroll exports"
+        ],
+        action: "Get Started"
+      },
+      {
+        title: "Payroll Professional",
+        description: "For finance teams with recurring payroll operations",
+        badge: "Most Popular",
+        prices: { monthly: "45", quarterly: "128", semi: "243", yearly: "450" },
+        features: [
+          "Up to 150 employees",
+          "Loans and contract salary components",
+          "Approval-ready payroll records",
+          "Priority payroll support"
+        ],
+        action: "Choose Plan"
+      },
+      {
+        title: "Payroll Enterprise",
+        description: "For complex payroll policies and organization structures",
+        prices: { monthly: "Custom", quarterly: "Custom", semi: "Custom", yearly: "Custom" },
+        features: [
+          "Unlimited employees",
+          "Advanced payroll policies",
+          "Dedicated implementation and account support",
+          "Custom finance exports and integrations"
+        ],
+        action: "Contact Sales"
+      }
+    ],
+    bundle: [
+      {
+        title: "Attendance & Payroll Basic",
+        description: "For teams that want attendance and payroll connected",
+        prices: { monthly: "39", quarterly: "111", semi: "211", yearly: "390" },
+        features: [
+          "Up to 50 employees",
+          "Attendance tracking and leave workflow",
+          "Payroll records and payslips",
+          "Basic reports and exports"
+        ],
+        action: "Get Started"
+      },
+      {
+        title: "Attendance & Payroll Growth",
+        description: "For growing companies that want people and pay in one place",
+        badge: "Best Value",
+        prices: { monthly: "59", quarterly: "168", semi: "319", yearly: "590" },
+        features: [
+          "Up to 150 employees",
+          "Attendance analytics and policy controls",
+          "Payroll records, payslips, and exports",
+          "Priority support and onboarding"
+        ],
+        action: "Choose Plan"
+      },
+      {
+        title: "Attendance & Payroll Enterprise",
+        description: "Tailored for multi-branch and finance-led organizations",
+        prices: { monthly: "Custom", quarterly: "Custom", semi: "Custom", yearly: "Custom" },
+        features: [
+          "Unlimited employees",
+          "Advanced attendance and payroll automation",
+          "Dedicated implementation and account support",
+          "Custom integrations and reporting"
+        ],
+        action: "Contact Sales"
+      }
+    ]
+  };
+
+  const periodLabels = {
+    monthly: "/month",
+    quarterly: "/quarter",
+    semi: "/semi",
+    yearly: "/year"
+  };
+
+  const setActiveTab = (tabs, activeTab) => {
+    tabs.forEach((tab) => {
+      tab.classList.toggle("active", tab === activeTab);
+    });
+  };
+
+  const renderPrice = (price, period) => {
+    if (price === "Custom") {
+      return "Custom";
+    }
+
+    return `<img src="img/Saudi_Riyal_Symbol.png" alt="Saudi_Riyal_Symbol" width="20px"> ${price}<span>${periodLabels[period]}</span>`;
+  };
+
+  const updatePricing = () => {
+    if (!pricingCards.length) {
+      return;
+    }
+
+    const activeProduct = document.querySelector("[data-pricing-product].active").dataset.pricingProduct;
+    const activePeriod = document.querySelector("[data-pricing-period].active").dataset.pricingPeriod;
+
+    pricingCards.forEach((card) => {
+      const plan = pricingPlans[activeProduct][Number(card.dataset.planIndex)];
+      const badge = card.querySelector("[data-plan-badge]");
+
+      card.querySelector("[data-plan-title]").textContent = plan.title;
+      card.querySelector("[data-plan-description]").textContent = plan.description;
+      card.querySelector("[data-plan-price]").innerHTML = renderPrice(plan.prices[activePeriod], activePeriod);
+      card.querySelector("[data-plan-features]").innerHTML = plan.features
+        .map((feature) => `<li><i class="fas fa-check"></i> ${feature}</li>`)
+        .join("");
+      card.querySelector("[data-plan-action]").textContent = plan.action;
+
+      if (badge) {
+        badge.textContent = plan.badge || "";
+        badge.style.display = plan.badge ? "inline-block" : "none";
+      }
+    });
+  };
+
+  productTabs.forEach((tab) => {
+    tab.addEventListener("click", () => {
+      setActiveTab(productTabs, tab);
+      updatePricing();
+    });
+  });
+
+  periodTabs.forEach((tab) => {
+    tab.addEventListener("click", () => {
+      setActiveTab(periodTabs, tab);
+      updatePricing();
+    });
+  });
+
+  updatePricing();
+
   if (window.lightbox) {
     lightbox.option({
       resizeDuration: 200,
