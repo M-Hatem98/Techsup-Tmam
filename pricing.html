@@ -1,0 +1,455 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="utf-8" />
+  <title>Tamam Pricing</title>
+  <meta content="width=device-width, initial-scale=1.0" name="viewport" />
+  <meta content="" name="keywords" />
+  <meta content="" name="description" />
+
+  <link href="img/favicon.ico" rel="icon" />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Open+Sans&family=Space+Grotesk&display=swap" rel="stylesheet" />
+  <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.10.0/css/all.min.css" rel="stylesheet" />
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.4.1/font/bootstrap-icons.css" rel="stylesheet" />
+  <link href="lib/animate/animate.min.css" rel="stylesheet" />
+  <link href="css/bootstrap.min.css" rel="stylesheet" />
+  <link href="css/style.css" rel="stylesheet" />
+</head>
+
+<body>
+  <div class="mainPage">
+    <div id="spinner"
+      class="show bg-white position-fixed translate-middle w-100 vh-100 top-50 start-50 d-flex align-items-center justify-content-center">
+      <div class="spinner-grow text-primary" style="width: 3rem; height: 3rem" role="status">
+        <span class="sr-only">Loading...</span>
+      </div>
+    </div>
+
+    <div class="container-fluid sticky-top">
+      <div class="container-fluid">
+        <nav class="navbar navbar-expand-lg navbar-transparent border-bottom border-2 border-white py-0">
+          <a href="index.html" class="navbar-brand">
+            <img id="Logo" src="img/logo.png" alt="Tamam Logo" width="80px" height="auto" />
+          </a>
+          <button type="button" class="navbar-toggler ms-auto me-0" data-bs-toggle="collapse"
+            data-bs-target="#navbarCollapse">
+            <span class="navbar-toggler-icon"></span>
+          </button>
+          <div class="collapse navbar-collapse" id="navbarCollapse">
+            <div class="navbar-nav ms-auto">
+              <a href="index.html" class="nav-item nav-link">Home</a>
+              <a href="index.html#how-it-works" class="nav-item nav-link">How It Works</a>
+              <a href="index.html#why-choose-us" class="nav-item nav-link">Why Choose Us</a>
+              <a href="pricing.html" class="nav-item nav-link active">Pricing</a>
+              <a href="user-guide.html" class="nav-item nav-link">User Guide</a>
+              <a href="contact.html" class="nav-item nav-link">Contact</a>
+              <a href="contact.html" class="btn btn-primary ms-3 get-started-btn">Get Started</a>
+            </div>
+          </div>
+        </nav>
+      </div>
+    </div>
+
+    <section class="pricing-page-hero py-5">
+      <div class="container py-5 text-center">
+        <h1 class="fw-bold mb-3">Tamam <span class="text-primary">subscription</span> packages</h1>
+        <p class="text-muted mx-auto mb-0">
+          Choose the appropriate package for your facility, specify the number of employees and the subscription period
+          to have the price automatically calculated easily.
+        </p>
+      </div>
+    </section>
+    <!-- 
+    <section class="pricing-page-section py-5">
+      <div class="container">
+        <div class="pricing-builder">
+          <div class="pricing-builder__control">
+            <label for="pricingUsers">Number of users</label>
+            <div class="pricing-users-control">
+              <button type="button" data-users-step="-1" aria-label="Decrease users">-</button>
+              <input id="pricingUsers" type="number" min="1" value="25" data-pricing-users>
+              <button type="button" data-users-step="1" aria-label="Increase users">+</button>
+            </div>
+          </div>
+
+          <div class="pricing-tab-content pricing-tab-content--page">
+            <div class="pricing-tab-group pricing-tab-group--period" role="tablist" aria-label="Billing period">
+              <button class="pricing-tab active" type="button" data-checkout-period="monthly">Monthly</button>
+              <button class="pricing-tab" type="button" data-checkout-period="quarterly">Quarterly</button>
+              <button class="pricing-tab" type="button" data-checkout-period="semi">Semi</button>
+              <button class="pricing-tab" type="button" data-checkout-period="yearly">Yearly</button>
+            </div>
+
+            <div class="pricing-grid pricing-grid--checkout">
+              <div class="price-card checkout-plan-card selected" data-checkout-plan data-plan-name="Attendance"
+                data-plan-price="19">
+                <div class="badge">Selected</div>
+                <div class="price-header">
+                  <h4>Attendance</h4>
+                  <p>For teams that need reliable check-in, approvals, and attendance reports.</p>
+                </div>
+                <div class="price-tag">
+                  <h3><img src="img/Saudi_Riyal_Symbol.png" alt="Saudi Riyal" width="20px"> 19<span>/user/month</span>
+                  </h3>
+                </div>
+                <ul class="price-features">
+                  <li><i class="fas fa-check"></i> Attendance tracking</li>
+                  <li><i class="fas fa-check"></i> Leave and approval workflow</li>
+                  <li><i class="fas fa-check"></i> Location and shift controls</li>
+                  <li><i class="fas fa-check"></i> Reports and exports</li>
+                </ul>
+                <button class="price-btn primary-btn" type="button">Choose Package</button>
+              </div>
+
+              <div class="price-card checkout-plan-card" data-checkout-plan data-plan-name="Payroll"
+                data-plan-price="25">
+                <div class="price-header">
+                  <h4>Payroll</h4>
+                  <p>For teams that want salary records, payslips, and finance exports.</p>
+                </div>
+                <div class="price-tag">
+                  <h3><img src="img/Saudi_Riyal_Symbol.png" alt="Saudi Riyal" width="20px"> 25<span>/user/month</span>
+                  </h3>
+                </div>
+                <ul class="price-features">
+                  <li><i class="fas fa-check"></i> Payroll records</li>
+                  <li><i class="fas fa-check"></i> Salary components</li>
+                  <li><i class="fas fa-check"></i> Payslip generation</li>
+                  <li><i class="fas fa-check"></i> Payroll exports</li>
+                </ul>
+                <button class="price-btn" type="button">Choose Package</button>
+              </div>
+
+              <div class="price-card checkout-plan-card" data-checkout-plan data-plan-name="Attendance & Payroll"
+                data-plan-price="39">
+                <div class="price-header">
+                  <h4>Attendance & Payroll</h4>
+                  <p>For companies that want attendance and payroll working together.</p>
+                </div>
+                <div class="price-tag">
+                  <h3><img src="img/Saudi_Riyal_Symbol.png" alt="Saudi Riyal" width="20px"> 39<span>/user/month</span>
+                  </h3>
+                </div>
+                <ul class="price-features">
+                  <li><i class="fas fa-check"></i> Attendance and payroll</li>
+                  <li><i class="fas fa-check"></i> Policies and approvals</li>
+                  <li><i class="fas fa-check"></i> Payslips and exports</li>
+                  <li><i class="fas fa-check"></i> Priority onboarding</li>
+                </ul>
+                <button class="price-btn" type="button">Choose Package</button>
+              </div>
+            </div>
+          </div>
+
+          <div class="checkout-summary" aria-label="Checkout summary">
+            <h3>Checkout</h3>
+            <div class="checkout-summary__items d-flex justify-content-between">
+              <div class="checkout-summary__line">
+                <span>Chosen package</span>
+                <strong data-summary-package>Attendance</strong>
+              </div>
+              <div class="checkout-summary__line">
+                <span>Users</span>
+                <strong data-summary-users>25</strong>
+              </div>
+              <div class="checkout-summary__line">
+                <span>Period</span>
+                <strong data-summary-period>Monthly</strong>
+              </div>
+              <div class="checkout-summary__line">
+                <span>Subtotal</span>
+                <strong data-summary-subtotal> 475.00</strong>
+              </div>
+              <div class="checkout-summary__line">
+                <span>Discount</span>
+                <strong data-summary-discount> 0.00</strong>
+              </div>
+              <div class="checkout-summary__line">
+                <span>VAT 15%</span>
+                <strong data-summary-vat> 71.25</strong>
+              </div>
+              <div class="checkout-summary__total">
+                <span>Total after VAT</span>
+                <strong data-summary-total> 546.25</strong>
+              </div>
+            </div>
+            <a class="btn btn-primary w-100 mt-4" href="contact.html">Continue Checkout</a>
+          </div>
+        </div>
+      </div>
+    </section> -->
+
+    <section class="pricing-comparison py-5">
+      <div class="container">
+        <div class="pricing-comparison__filters mb-4">
+          <div class="row gap-1">
+            <div class="col-4 pricing-comparison__filter-group d-flex justify-content-between">
+              <div class="row">
+                <div class="col-12 d-flex justify-content-center mb-3">
+                  <span class="filter-label">System choice:</span>
+                </div>
+                <div class="col-12 d-flex justify-content-center p-0">
+
+                  <button type="button" class="pricing-chip active" data-compare-system="attendance">Attendance</button>
+                  <button type="button" class="pricing-chip" data-compare-system="payroll">Payroll</button>
+                  <button type="button" class="pricing-chip" data-compare-system="bundle">Attendance & Payroll</button>
+                </div>
+              </div>
+            </div>
+            <div class="col-4 pricing-comparison__filter-group">
+              <div class="row">
+                <div class="col-12 d-flex justify-content-center mb-3">
+                  <span class="filter-label">Subscription period:</span>
+                </div>
+                <div class="col-12 d-flex justify-content-center">
+                  <button type="button" class="pricing-chip active" data-compare-period="yearly">Yearly</button>
+                  <button type="button" class="pricing-chip" data-compare-period="semi">6 months</button>
+                </div>
+              </div>
+            </div>
+            <div class="col-4 pricing-comparison__filter-group">
+              <div class="row">
+                <div class="col-12 d-flex justify-content-center mb-3">
+                  <span class="filter-label">Employee band:</span>
+                </div>
+                <div class="col-12 d-flex justify-content-center">
+
+                  <button type="button" class="pricing-chip" data-compare-band="5-50">5–50</button>
+                  <button type="button" class="pricing-chip active" data-compare-band="51-200">51–200</button>
+                  <button type="button" class="pricing-chip" data-compare-band="201+">201+</button>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="pricing-comparison__filters mb-4">
+          <div class="row g-4 mb-4">
+            <div class="col-lg-4">
+              <div class="compare-card" data-compare-plan="attendance">
+                <div class="compare-card__icon compare-card__icon--attendance"><i class="fas fa-users"></i></div>
+                <h4>Attendance</h4>
+                <p>Reliable check-in, location control, shift management, and reports.</p>
+                <ul class="compare-card__list">
+                  <li>Attendance tracking and approvals</li>
+                  <li>Shift scheduling and locations</li>
+                  <li>Leave and timesheet reports</li>
+                  <li>Export-ready attendance data</li>
+                </ul>
+                <div class="compare-card__price" data-compare-price="attendance">
+                  <span>Starting from</span>
+                  <strong><img src="img/Saudi_Riyal_Symbol.png" alt="Saudi Riyal" width="20px"><span
+                      class="compare-price-value">19</span> <small>/user/month</small></strong>
+                </div>
+                <!-- <button class="btn btn-outline-primary w-100 mt-3" type="button"
+                  data-compare-action="attendance">Subscribe Now</button> -->
+              </div>
+            </div>
+            
+            <div class="col-lg-4">
+              <div class="compare-card" data-compare-plan="payroll">
+                <div class="compare-card__icon compare-card__icon--payroll"><i class="fas fa-file-invoice-dollar"></i>
+                </div>
+                <h4>Payroll</h4>
+                <p>Salary records, payslips, approvals, and finance exports.</p>
+                <ul class="compare-card__list">
+                  <li>Payroll records and salary components</li>
+                  <li>Payslip generation and export</li>
+                  <li>Leave & bonus handling</li>
+                  <li>Priority payroll assistance</li>
+                </ul>
+                <div class="compare-card__price" data-compare-price="payroll">
+                  <span>Starting from</span>
+                  <strong><img src="img/Saudi_Riyal_Symbol.png" alt="Saudi Riyal" width="20px"><span
+                      class="compare-price-value">25</span> <small>/user/month</small></strong>
+                </div>
+                <!-- <button class="btn btn-outline-primary w-100 mt-3" type="button" data-compare-action="payroll">Subscribe
+                  Now</button> -->
+              </div>
+            </div>
+            <div class="col-lg-4">
+              <div class="compare-card" data-compare-plan="bundle">
+                <div class="compare-card__badge">Best Value</div>
+                <div class="compare-card__icon compare-card__icon--full"><i class="fas fa-check-circle"></i></div>
+                <h4>Complete Package</h4>
+                <p>Attendance, schedules, payroll, approvals, and reports in one system.</p>
+                <ul class="compare-card__list">
+                  <li>Attendance & payroll in one place</li>
+                  <li>Unified employee and policy management</li>
+                  <li>Automated payslips and exports</li>
+                  <li>Dedicated support and onboarding</li>
+                </ul>
+                <div class="compare-card__price" data-compare-price="bundle">
+                  <span>Starting from</span>
+                  <strong><img src="img/Saudi_Riyal_Symbol.png" alt="Saudi Riyal" width="20px"><span
+                      class="compare-price-value">39</span> <small>/user/month</small></strong>
+                </div>
+                <!-- <button class="btn btn-primary w-100 mt-3" type="button" data-compare-action="bundle">Subscribe
+                  Now</button> -->
+              </div>
+            </div>
+            
+          </div>
+        </div>
+        <div class="row g-4 align-items-start">
+          <div class="col-lg-8">
+            <div class="pricing-comparison__table mb-4">
+              <h5>Pricing by employee count</h5>
+              <div class="table-responsive">
+                <table class="table align-middle">
+                  <thead>
+                    <tr>
+                      <th>Employee range</th>
+                      <th>Attendance</th>
+                      <th>Payroll</th>
+                      <th>Complete package</th>
+                    </tr>
+                  </thead>
+                  <tbody>
+                    <tr>
+                      <td>5–50 employees</td>
+                      <td data-compare-cell="attendance" data-compare-band="5-50"></td>
+                      <td data-compare-cell="payroll" data-compare-band="5-50"></td>
+                      <td data-compare-cell="bundle" data-compare-band="5-50"></td>
+                    </tr>
+                    <tr>
+                      <td>51–200 employees</td>
+                      <td data-compare-cell="attendance" data-compare-band="51-200"></td>
+                      <td data-compare-cell="payroll" data-compare-band="51-200"></td>
+                      <td data-compare-cell="bundle" data-compare-band="51-200"></td>
+                    </tr>
+                    <tr>
+                      <td>201+ employees</td>
+                      <td data-compare-cell="attendance" data-compare-band="201+"></td>
+                      <td data-compare-cell="payroll" data-compare-band="201+"></td>
+                      <td data-compare-cell="bundle" data-compare-band="201+"></td>
+                    </tr>
+                  </tbody>
+                </table>
+              </div>
+            </div>
+
+            <div class="payment-options row" role="radiogroup" aria-label="Payment options">
+              <div class="col-md-3">
+                <button type="button" class="billing-option w-100" data-compare-payment="monthly" aria-pressed="false">
+                  <h6>Monthly</h6>
+                  <p>No discount</p>
+                </button>
+              </div>
+              <div class="col-md-3">
+                <button type="button" class="billing-option w-100" data-compare-payment="quarterly" aria-pressed="false">
+                  <h6>Quarterly</h6>
+                  <p>8% discount</p>
+                </button>
+              </div>
+              <div class="col-md-3">
+                <button type="button" class="billing-option w-100" data-compare-payment="semi" aria-pressed="false">
+                  <h6>6 months</h6>
+                  <p>10% discount</p>
+                </button>
+              </div>
+              <div class="col-md-3">
+                <button type="button" class="billing-option active w-100" data-compare-payment="yearly" aria-pressed="true">
+                  <h6>Yearly</h6>
+                  <p>15% discount</p>
+                </button>
+              </div>
+            </div>
+          </div>
+          <div class="col-lg-4">
+            <div class="summary-card">
+              <div class="summary-card__header">
+                <h5>Subscription summary</h5>
+                <span class="badge bg-primary">Selected</span>
+              </div>
+              <div class="summary-line d-flex justify-content-between" data-summary-field="package">
+                <span>Package</span>
+                <strong>Complete Package</strong>
+              </div>
+              <div class="summary-line d-flex justify-content-between" data-summary-field="employees">
+                <span>Employees</span>
+                <strong>75</strong>
+              </div>
+              <div class="summary-line d-flex justify-content-between" data-summary-field="billing">
+                <span>Billing</span>
+                <strong>Yearly</strong>
+              </div>
+              <div class="summary-line d-flex justify-content-between" data-summary-field="base">
+                <span>Base price</span>
+                <strong><img src="img/Saudi_Riyal_Symbol.png" alt="Saudi Riyal" width="16px"> 2,100</strong>
+              </div>
+              <div class="summary-line d-flex justify-content-between" data-summary-field="discount">
+                <span data-summary-label="discount">Discount</span>
+                <strong>- <img src="img/Saudi_Riyal_Symbol.png" alt="Saudi Riyal" width="16px"> 315</strong>
+              </div>
+              <div class="summary-line d-flex justify-content-between" data-summary-field="vat">
+                <span data-summary-label="vat">VAT 15%</span>
+                <strong><img src="img/Saudi_Riyal_Symbol.png" alt="Saudi Riyal" width="16px"> 283.13</strong>
+              </div>
+              <hr>
+              <div class="summary-line d-flex justify-content-between summary-line--total" data-summary-field="total">
+                <span>Total including VAT</span>
+                <strong><img src="img/Saudi_Riyal_Symbol.png" alt="Saudi Riyal" width="16px"> 2,068.13</strong>
+              </div>
+              <button class="btn btn-primary w-100 mt-3" type="button">Start Now</button>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <div class="container-fluid bg-dark text-white-50 footer pt-5">
+      <div class="container py-3">
+        <div class="row g-5">
+          <div class="col-md-6 col-lg-5 wow fadeIn" data-wow-delay="0.1s">
+            <a href="index.html" class="d-flex justify-content-center d-inline-block mb-3">
+              <img src="img/logo.png" width="120px" alt="Logo">
+            </a>
+            <p class="mb-4">
+              Tamam Attendance & Payroll helps HR teams manage attendance, contracts,
+              policies, payroll records, and reports from one secure platform.
+            </p>
+          </div>
+
+          <div class="col-md-6 col-lg-4 wow fadeIn" data-wow-delay="0.3s">
+            <h5 class="text-white mb-4">Get In Touch</h5>
+            <p><i class="fa fa-map-marker-alt me-3"></i>12 Cerecon - 4th Floor - Office No. 403, Olaya St, Riyadh 12241,
+              Saudi Arabia.</p>
+            <p><i class="fa fa-phone-alt me-3"></i>+966 920015409</p>
+            <p><i class="fa fa-envelope me-3"></i>info@techsupbusiness.com</p>
+          </div>
+
+          <div class="col-md-6 col-lg-3 wow fadeIn" data-wow-delay="0.5s">
+            <h5 class="text-white mb-4">Quick Links</h5>
+            <a class="btn btn-link" href="index.html">Home</a>
+            <a class="btn btn-link" href="index.html#how-it-works">How It Works</a>
+            <a class="btn btn-link" href="index.html#why-choose-us">Why Choose US</a>
+            <a class="btn btn-link" href="pricing.html">Pricing</a>
+            <a class="btn btn-link" href="contact.html">Contact Us</a>
+          </div>
+        </div>
+      </div>
+
+      <div class="container wow fadeIn" data-wow-delay="0.1s">
+        <div class="copyright">
+          <div class="row justify-content-center">
+            <div class="col-md-6 text-center mb-3 mb-md-0">
+              &copy; <a class="border-bottom" href="#">Techsup Tamam</a>, All Rights Reserved.
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <a href="#" class="btn btn-lg btn-primary btn-lg-square back-to-top"><i class="bi bi-arrow-up"></i></a>
+  </div>
+
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.1/jquery.min.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0/dist/js/bootstrap.bundle.min.js"></script>
+  <script src="lib/wow/wow.min.js"></script>
+  <script src="js/main.js"></script>
+</body>
+
+</html>

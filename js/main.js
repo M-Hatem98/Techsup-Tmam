@@ -256,8 +256,15 @@ if (modalForm && modalEmailInput && modalErrorText) {
       return;
     }
 
-    const activeProduct = document.querySelector("[data-pricing-product].active").dataset.pricingProduct;
-    const activePeriod = document.querySelector("[data-pricing-period].active").dataset.pricingPeriod;
+    const activeProductTab = document.querySelector("[data-pricing-product].active");
+    const activePeriodTab = document.querySelector("[data-pricing-period].active");
+
+    if (!activeProductTab || !activePeriodTab) {
+      return;
+    }
+
+    const activeProduct = activeProductTab.dataset.pricingProduct;
+    const activePeriod = activePeriodTab.dataset.pricingPeriod;
 
     pricingCards.forEach((card) => {
       const plan = pricingPlans[activeProduct][Number(card.dataset.planIndex)];
@@ -294,6 +301,105 @@ if (modalForm && modalEmailInput && modalErrorText) {
 
   updatePricing();
 
+  // Pricing checkout page
+  const checkoutPlans = document.querySelectorAll("[data-checkout-plan]");
+  const checkoutPeriodTabs = document.querySelectorAll("[data-checkout-period]");
+  const usersInput = document.querySelector("[data-pricing-users]");
+
+  const checkoutPeriods = {
+    monthly: { label: "Monthly", months: 1, discount: 0 },
+    quarterly: { label: "Quarterly", months: 3, discount: 0.05 },
+    semi: { label: "Semi", months: 6, discount: 0.1 },
+    yearly: { label: "Yearly", months: 12, discount: 0.15 }
+  };
+
+  const formatSar = (value) => {
+    const formattedValue = value.toLocaleString("en-US", {
+      minimumFractionDigits: 2,
+      maximumFractionDigits: 2
+    });
+
+    return `<img src="img/Saudi_Riyal_Symbol.png" alt="Saudi Riyal" width="20px"> ${formattedValue}`;
+  };
+
+  const getSelectedCheckoutPlan = () => {
+    return document.querySelector("[data-checkout-plan].selected") || checkoutPlans[0];
+  };
+
+  const updateCheckoutSummary = () => {
+    if (!checkoutPlans.length || !usersInput) {
+      return;
+    }
+
+    const selectedPlan = getSelectedCheckoutPlan();
+    const selectedPeriodTab = document.querySelector("[data-checkout-period].active");
+    const periodKey = selectedPeriodTab ? selectedPeriodTab.dataset.checkoutPeriod : "monthly";
+    const period = checkoutPeriods[periodKey];
+    const users = Math.max(1, Number(usersInput.value) || 1);
+    const monthlyPrice = Number(selectedPlan.dataset.planPrice);
+    const subtotal = monthlyPrice * users * period.months;
+    const discount = subtotal * period.discount;
+    const afterDiscount = subtotal - discount;
+    const vat = afterDiscount * 0.15;
+    const total = afterDiscount + vat;
+
+    usersInput.value = users;
+
+    document.querySelector("[data-summary-package]").textContent = selectedPlan.dataset.planName;
+    document.querySelector("[data-summary-users]").textContent = users;
+    document.querySelector("[data-summary-period]").textContent = period.label;
+    document.querySelector("[data-summary-subtotal]").textContent = formatSar(subtotal);
+    document.querySelector("[data-summary-discount]").textContent = formatSar(discount);
+    document.querySelector("[data-summary-vat]").textContent = formatSar(vat);
+    document.querySelector("[data-summary-total]").textContent = formatSar(total);
+  };
+
+  checkoutPlans.forEach((plan) => {
+    plan.addEventListener("click", () => {
+      checkoutPlans.forEach((item) => {
+        item.classList.remove("selected");
+        const button = item.querySelector(".price-btn");
+        if (button) {
+          button.classList.remove("primary-btn");
+        }
+      });
+
+      plan.classList.add("selected");
+      const button = plan.querySelector(".price-btn");
+      if (button) {
+        button.classList.add("primary-btn");
+      }
+
+      updateCheckoutSummary();
+    });
+  });
+
+  checkoutPeriodTabs.forEach((tab) => {
+    tab.addEventListener("click", () => {
+      setActiveTab(checkoutPeriodTabs, tab);
+      updateCheckoutSummary();
+    });
+  });
+
+  document.querySelectorAll("[data-users-step]").forEach((button) => {
+    button.addEventListener("click", () => {
+      if (!usersInput) {
+        return;
+      }
+
+      const nextUsers = (Number(usersInput.value) || 1) + Number(button.dataset.usersStep);
+      usersInput.value = Math.max(1, nextUsers);
+      updateCheckoutSummary();
+    });
+  });
+
+  if (usersInput) {
+    usersInput.addEventListener("input", updateCheckoutSummary);
+    usersInput.addEventListener("blur", updateCheckoutSummary);
+  }
+
+  updateCheckoutSummary();
+
   if (window.lightbox) {
     lightbox.option({
       resizeDuration: 200,
@@ -302,6 +408,192 @@ if (modalForm && modalEmailInput && modalErrorText) {
       wrapAround: true
     });
   }
+
+  const compareFilters = document.querySelectorAll(
+    ".pricing-comparison__filters button[data-compare-system], " +
+    ".pricing-comparison__filters button[data-compare-period], " +
+    ".pricing-comparison__filters button[data-compare-band], " +
+    "button[data-compare-payment]"
+  );
+  const comparePriceCells = document.querySelectorAll("[data-compare-cell]");
+  const comparePriceCards = document.querySelectorAll("[data-compare-price]");
+  const compareCards = document.querySelectorAll("[data-compare-plan]");
+  const compareSummary = document.querySelector(".summary-card");
+  const compareSummaryLines = {
+    package: compareSummary ? compareSummary.querySelector("[data-summary-field=package] strong") : null,
+    employees: compareSummary ? compareSummary.querySelector("[data-summary-field=employees] strong") : null,
+    billing: compareSummary ? compareSummary.querySelector("[data-summary-field=billing] strong") : null,
+    base: compareSummary ? compareSummary.querySelector("[data-summary-field=base] strong") : null,
+    discount: compareSummary ? compareSummary.querySelector("[data-summary-field=discount] strong") : null,
+    vat: compareSummary ? compareSummary.querySelector("[data-summary-field=vat] strong") : null,
+    total: compareSummary ? compareSummary.querySelector("[data-summary-field=total] strong") : null
+  };
+
+  const comparePlans = {
+    attendance: { label: "Attendance", icon: "fas fa-users" },
+    payroll: { label: "Payroll", icon: "fas fa-file-invoice-dollar" },
+    bundle: { label: "Complete Package", icon: "fas fa-check-circle" }
+  };
+
+  const comparePlanPrices = {
+    attendance: {
+      monthly: { "5-50": "19", "51-200": "17", "201+": "Custom" },
+      quarterly: { "5-50": "54", "51-200": "52", "201+": "Custom" },
+      semi: { "5-50": "102", "51-200": "100", "201+": "Custom" },
+      yearly: { "5-50": "190", "51-200": "180", "201+": "Custom" }
+    },
+    payroll: {
+      monthly: { "5-50": "25", "51-200": "23", "201+": "Custom" },
+      quarterly: { "5-50": "71", "51-200": "70", "201+": "Custom" },
+      semi: { "5-50": "135", "51-200": "132", "201+": "Custom" },
+      yearly: { "5-50": "250", "51-200": "240", "201+": "Custom" }
+    },
+    bundle: {
+      monthly: { "5-50": "39", "51-200": "37", "201+": "Custom" },
+      quarterly: { "5-50": "111", "51-200": "109", "201+": "Custom" },
+      semi: { "5-50": "211", "51-200": "205", "201+": "Custom" },
+      yearly: { "5-50": "390", "51-200": "370", "201+": "Custom" }
+    }
+  };
+
+  const compareBandSizes = {
+    "5-50": 30,
+    "51-200": 125,
+    "201+": 220
+  };
+
+  const getCompareActive = (type) => {
+    const active = document.querySelector(`[data-compare-${type}].active`);
+    return active ? active.dataset[`compare${type.charAt(0).toUpperCase() + type.slice(1)}`] : null;
+  };
+
+  const updateComparePriceCells = () => {
+    const selectedPeriod = getCompareActive("period") || "yearly";
+
+    comparePriceCells.forEach((cell) => {
+      const plan = cell.dataset.compareCell;
+      const band = cell.dataset.compareBand;
+      const planPrices = comparePlanPrices[plan]?.[selectedPeriod];
+      if (!planPrices) {
+        cell.innerHTML = "Custom pricing";
+        return;
+      }
+
+      const price = planPrices[band];
+      if (price === "Custom") {
+        cell.innerHTML = "Custom pricing";
+      } else {
+        cell.innerHTML = `<img src="img/Saudi_Riyal_Symbol.png" alt="Saudi Riyal" width="16px"> ${price}`;
+      }
+    });
+  };
+
+  const updateComparePriceCards = () => {
+    const selectedPeriod = getCompareActive("period") || "yearly";
+    const periodLabel = selectedPeriod === "monthly"
+      ? "/user/month"
+      : selectedPeriod === "quarterly"
+      ? "/user/quarter"
+      : selectedPeriod === "semi"
+      ? "/user/6 months"
+      : "/user/year";
+
+    comparePriceCards.forEach((card) => {
+      const plan = card.dataset.comparePrice;
+      const planPrices = comparePlanPrices[plan]?.[selectedPeriod];
+      if (!planPrices) return;
+
+      const price = planPrices[getCompareActive("band") || "51-200"];
+      const valueEl = card.querySelector(".compare-price-value");
+      const suffixEl = card.querySelector("small");
+
+      if (price === "Custom") {
+        if (valueEl) valueEl.textContent = "Custom";
+        if (suffixEl) suffixEl.textContent = "";
+      } else {
+        if (valueEl) valueEl.textContent = price;
+        if (suffixEl) suffixEl.textContent = periodLabel;
+      }
+    });
+  };
+
+  const updateCompareCards = () => {
+    const selectedSystem = getCompareActive("system") || "attendance";
+    compareCards.forEach((card) => {
+      card.classList.toggle("compare-card--active", card.dataset.comparePlan === selectedSystem);
+    });
+  };
+
+  const updateCompareSummary = () => {
+    const selectedSystem = getCompareActive("system") || "attendance";
+    const selectedPeriod = getCompareActive("period") || "yearly";
+    const selectedBand = getCompareActive("band") || "51-200";
+    const selectedPayment = getCompareActive("payment") || "yearly";
+
+    if (!compareSummary) return;
+
+    const planLabel = comparePlans[selectedSystem]?.label || "Complete Package";
+    const periodLabel = selectedPayment === "semi" ? "6 months" : selectedPayment.charAt(0).toUpperCase() + selectedPayment.slice(1);
+    const employeesLabel = selectedBand === "201+" ? "201+ employees" : `${selectedBand.replace("-", "–")} employees`;
+    const basePrice = comparePlanPrices[selectedSystem]?.[selectedPeriod]?.[selectedBand] || "Custom";
+    const discountRate = selectedPayment === "yearly" ? 0.15 : selectedPayment === "semi" ? 0.10 : 0;
+    const priceValue = basePrice === "Custom" ? 0 : Number(basePrice);
+    const employeeCount = compareBandSizes[selectedBand] || 75;
+    const subtotal = priceValue * employeeCount;
+    const discount = subtotal * discountRate;
+    const afterDiscount = subtotal - discount;
+    const vat = afterDiscount * 0.15;
+    const total = afterDiscount + vat;
+
+    const format = (value) => `<img src="img/Saudi_Riyal_Symbol.png" alt="Saudi Riyal" width="16px"> ${value.toLocaleString("en-US", { minimumFractionDigits: 2, maximumFractionDigits: 2 })}`;
+
+    if (compareSummaryLines.package) compareSummaryLines.package.textContent = planLabel;
+    if (compareSummaryLines.employees) compareSummaryLines.employees.textContent = employeesLabel;
+    if (compareSummaryLines.billing) compareSummaryLines.billing.textContent = periodLabel;
+    if (compareSummaryLines.base) compareSummaryLines.base.innerHTML = priceValue ? format(subtotal) : "Custom pricing";
+    if (compareSummaryLines.discount) compareSummaryLines.discount.innerHTML = priceValue ? `- ${format(discount)}` : "-";
+    if (compareSummaryLines.vat) compareSummaryLines.vat.innerHTML = priceValue ? format(vat) : "-";
+    if (compareSummaryLines.total) compareSummaryLines.total.innerHTML = priceValue ? format(total) : "Custom pricing";
+
+    const discountLabelText = discountRate > 0 ? `Discount ${Math.round(discountRate * 100)}%` : "Discount";
+    const vatLabelText = `VAT 15%`;
+    const discountLabel = compareSummary ? compareSummary.querySelector("[data-summary-label=discount]") : null;
+    const vatLabel = compareSummary ? compareSummary.querySelector("[data-summary-label=vat]") : null;
+    if (discountLabel) discountLabel.textContent = discountLabelText;
+    if (vatLabel) vatLabel.textContent = vatLabelText;
+  };
+
+  const updateCompareSection = () => {
+    updateComparePriceCells();
+    updateComparePriceCards();
+    updateCompareCards();
+    updateCompareSummary();
+  };
+
+  compareFilters.forEach((filter) => {
+    filter.addEventListener("click", () => {
+      const groupType = Array.from(filter.attributes)
+        .map((attr) => attr.name)
+        .find((name) => name.startsWith("data-compare-"));
+      if (!groupType) return;
+
+      const filterType = groupType.replace("data-compare-", "");
+      const filterValue = filter.dataset[`compare${filterType.charAt(0).toUpperCase() + filterType.slice(1)}`];
+      const filterGroup = document.querySelectorAll(`[data-compare-${filterType}]`);
+
+      filterGroup.forEach((btn) => {
+        const isActive = btn.dataset[`compare${filterType.charAt(0).toUpperCase() + filterType.slice(1)}`] === filterValue;
+        btn.classList.toggle("active", isActive);
+        if (btn.hasAttribute("aria-pressed")) {
+          btn.setAttribute("aria-pressed", isActive ? "true" : "false");
+        }
+      });
+
+      updateCompareSection();
+    });
+  });
+
+  updateCompareSection();
 
   // Reveals
 
